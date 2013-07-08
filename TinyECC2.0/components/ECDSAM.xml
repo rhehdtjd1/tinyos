@@ -1,0 +1,114 @@
+<?xml version="1.0" ?>
+<component loc="53:ECDSAM.nc" nicename="ECDSAM" qname="ECDSAM">
+      <documentation loc="26:ECDSAM.nc">
+        <short>
+ module for ECDSA
+</short>
+      </documentation>
+      <module/>
+    <specification><interface loc="59:ECDSAM.nc" name="SHA1" provided="0" ref="0x40b698d8">
+      <component-ref nicename="ECDSAM" qname="ECDSAM"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SHA1" ref="0x40b698d8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="SHA1" qname="SHA1"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="reset" ref="0x40b69ab0" scoped=""/>
+        <function-ref name="update" ref="0x40b69b90" scoped=""/>
+        <function-ref name="digest" ref="0x40b69c70" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="57:ECDSAM.nc" name="ECC" provided="0" ref="0x40b476b0">
+      <component-ref nicename="ECDSAM" qname="ECDSAM"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ECC" ref="0x40b476b0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="ECC" qname="ECC"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="get_param" ref="0x40b47888" scoped=""/>
+        <function-ref name="point2octet" ref="0x40b47968" scoped=""/>
+        <function-ref name="win_mul" ref="0x40b47a48" scoped=""/>
+        <function-ref name="gen_private_key" ref="0x40b47b28" scoped=""/>
+        <function-ref name="win_mul_Z" ref="0x40b47c08" scoped=""/>
+        <function-ref name="octet2point" ref="0x40b47ce8" scoped=""/>
+        <function-ref name="init" ref="0x40b47dc8" scoped=""/>
+        <function-ref name="add_proj" ref="0x40b47ea8" scoped=""/>
+        <function-ref name="BarrettSetBuf" ref="0x40b46010" scoped=""/>
+        <function-ref name="point_is_zero" ref="0x40b460f0" scoped=""/>
+        <function-ref name="mul" ref="0x40b461d0" scoped=""/>
+        <function-ref name="dbl_proj" ref="0x40b462b0" scoped=""/>
+        <function-ref name="win_mul_base" ref="0x40b46390" scoped=""/>
+        <function-ref name="check_point" ref="0x40b464f0" scoped=""/>
+        <function-ref name="win_precompute_Z" ref="0x40b465d0" scoped=""/>
+        <function-ref name="add" ref="0x40b466b0" scoped=""/>
+        <function-ref name="gen_public_key" ref="0x40b46790" scoped=""/>
+        <function-ref name="win_precompute" ref="0x40b46870" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="58:ECDSAM.nc" name="Random" provided="0" ref="0x40b469f0">
+      <component-ref nicename="ECDSAM" qname="ECDSAM"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Random" ref="0x40b469f0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Random" qname="Random"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="rand16" ref="0x40b46bc8" scoped=""/>
+        <function-ref name="rand32" ref="0x40b46ca8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="56:ECDSAM.nc" name="NN" provided="0" ref="0x40b49040">
+      <component-ref nicename="ECDSAM" qname="ECDSAM"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="NN" ref="0x40b49040" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="NN" qname="NN"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="ModSqr" ref="0x40b49218" scoped=""/>
+        <function-ref name="LShift" ref="0x40b492f8" scoped=""/>
+        <function-ref name="ModSmall" ref="0x40b493d8" scoped=""/>
+        <function-ref name="Gcd" ref="0x40b494b8" scoped=""/>
+        <function-ref name="ModExp" ref="0x40b49598" scoped=""/>
+        <function-ref name="ModNeg" ref="0x40b49678" scoped=""/>
+        <function-ref name="AddDigitMult" ref="0x40b49758" scoped=""/>
+        <function-ref name="ModBarrett" ref="0x40b49838" scoped=""/>
+        <function-ref name="Digits" ref="0x40b49918" scoped=""/>
+        <function-ref name="ModSub" ref="0x40b499f8" scoped=""/>
+        <function-ref name="ModDiv" ref="0x40b49ad8" scoped=""/>
+        <function-ref name="Cmp" ref="0x40b49bb8" scoped=""/>
+        <function-ref name="ModBarrettInit" ref="0x40b49c98" scoped=""/>
+        <function-ref name="AssignDigit" ref="0x40b49df8" scoped=""/>
+        <function-ref name="BarrettSetBuf" ref="0x40b49ed8" scoped=""/>
+        <function-ref name="ModMult" ref="0x40b48010" scoped=""/>
+        <function-ref name="Sub" ref="0x40b480f0" scoped=""/>
+        <function-ref name="Mult" ref="0x40b481d0" scoped=""/>
+        <function-ref name="ModMultOpt" ref="0x40b482b0" scoped=""/>
+        <function-ref name="Assign" ref="0x40b48390" scoped=""/>
+        <function-ref name="Decode" ref="0x40b48470" scoped=""/>
+        <function-ref name="Encode" ref="0x40b48550" scoped=""/>
+        <function-ref name="Assign2Exp" ref="0x40b48630" scoped=""/>
+        <function-ref name="Mod" ref="0x40b48710" scoped=""/>
+        <function-ref name="ModSqrRootOpt" ref="0x40b487f0" scoped=""/>
+        <function-ref name="Div" ref="0x40b489d0" scoped=""/>
+        <function-ref name="Add" ref="0x40b48ab0" scoped=""/>
+        <function-ref name="ModAdd" ref="0x40b48b90" scoped=""/>
+        <function-ref name="One" ref="0x40b48c70" scoped=""/>
+        <function-ref name="Bits" ref="0x40b48d50" scoped=""/>
+        <function-ref name="TestBit" ref="0x40b48e30" scoped=""/>
+        <function-ref name="Equal" ref="0x40b48f10" scoped=""/>
+        <function-ref name="ModSqrOpt" ref="0x40b47010" scoped=""/>
+        <function-ref name="AssignZero" ref="0x40b470f0" scoped=""/>
+        <function-ref name="RShift" ref="0x40b471d0" scoped=""/>
+        <function-ref name="ModDivOpt" ref="0x40b472b0" scoped=""/>
+        <function-ref name="ModInv" ref="0x40b47390" scoped=""/>
+        <function-ref name="Even" ref="0x40b47470" scoped=""/>
+        <function-ref name="Zero" ref="0x40b47550" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="54:ECDSAM.nc" name="ECDSA" provided="1" ref="0x40b4cb08">
+      <component-ref nicename="ECDSAM" qname="ECDSAM"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ECDSA" ref="0x40b4cb08" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="ECDSA" qname="ECDSA"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="sign" ref="0x40b4cce0" scoped=""/>
+        <function-ref name="init" ref="0x40b4cdc0" scoped=""/>
+        <function-ref name="verify" ref="0x40b4cea0" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

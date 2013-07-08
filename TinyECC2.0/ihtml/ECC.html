@@ -1,0 +1,121 @@
+<html>
+  <head>
+    <LINK rel="stylesheet" href="nesdoc.css" type="text/css" media="screen"><title>Interface: ECC</title>
+  </head>
+  <body>
+    <h2>Interface: ECC</h2>
+    <b>interface ECC</b><p>
+ Interface for ECC operation
+ $Id: ECC.nc,v 1.6 2007/11/02 22:36:39 aliu3 Exp $
+
+    <p><p><div id=heading>Commands</div><div id=funcsig><span id=funcnameshort>command void <a href="#add">add</a>(Point *P0, Point *P1, Point *P2)
+      </span></div><div id=funcsig><span id=funcnameshort>command void <a href="#add_proj">add_proj</a>(Point *P0, NN_DIGIT *Z0, Point *P1, NN_DIGIT *Z1, Point *P2, NN_DIGIT *Z2)
+      </span></div><div id=funcsig><span id=funcnameshort>command void <a href="#BarrettSetBuf">BarrettSetBuf</a>()
+      </span></div><div id=funcsig><span id=funcnameshort>command int <a href="#check_point">check_point</a>(Point *P)
+      </span></div><div id=funcsig><span id=funcnameshort>command void <a href="#dbl_proj">dbl_proj</a>(Point *P0, NN_DIGIT *Z0, Point *P1, NN_DIGIT *Z1)
+      </span></div><div id=funcsig><span id=funcnameshort>command void <a href="#gen_private_key">gen_private_key</a>(NN_DIGIT *PrivateKey)
+      </span></div><div id=funcsig><span id=funcnameshort>command void <a href="#gen_public_key">gen_public_key</a>(Point *PublicKey, NN_DIGIT *PrivateKey)
+      </span></div><div id=funcsig><span id=funcnameshort>command Params *<a href="#get_param">get_param</a>()
+      </span></div><div id=funcsig><span id=funcnameshort>command void <a href="#init">init</a>()
+      </span></div><div id=funcsig><span id=funcnameshort>command void <a href="#mul">mul</a>(Point *P0, Point *P1, NN_DIGIT *n)
+      </span></div><div id=funcsig><span id=funcnameshort>command int <a href="#octet2point">octet2point</a>(Point *P, uint8_t *octet, int octet_len)
+      </span></div><div id=funcsig><span id=funcnameshort>command int <a href="#point2octet">point2octet</a>(uint8_t *octet, NN_UINT octet_len, Point *P, bool compress)
+      </span></div><div id=funcsig><span id=funcnameshort>command bool <a href="#point_is_zero">point_is_zero</a>(Point *P)
+      </span></div><div id=funcsig><span id=funcnameshort>command void <a href="#win_mul">win_mul</a>(Point *P0, NN_DIGIT *n, Point *pointArray)
+      </span></div><div id=funcsig><span id=funcnameshort>command void <a href="#win_mul_base">win_mul_base</a>(Point *P0, NN_DIGIT *n)
+      </span></div><div id=funcsig><span id=funcnameshort>command void <a href="#win_mul_Z">win_mul_Z</a>(Point *P0, NN_DIGIT *n, Point *pointArray, ZCoordinate *ZList)
+      </span></div><div id=funcsig><span id=funcnameshort>command void <a href="#win_precompute">win_precompute</a>(Point *baseP, Point *pointArray)
+      </span></div><div id=funcsig><span id=funcnameshort>command void <a href="#win_precompute_Z">win_precompute_Z</a>(Point *baseP, Point *pointArray, ZCoordinate *ZList)
+      </span></div><p><div id=heading>Commands - Details</div>
+    <a name="add"></a>
+    <h4>add
+    </h4>
+    <span id=funcnameshort>command void <b>add</b>(Point *P0, Point *P1, Point *P2)
+    </span><hr>
+    <a name="add_proj"></a>
+    <h4>add_proj
+    </h4>
+    <span id=funcnameshort>command void <b>add_proj</b>(Point *P0, NN_DIGIT *Z0, Point *P1, NN_DIGIT *Z1, Point *P2, NN_DIGIT *Z2)
+    </span><hr>
+    <a name="BarrettSetBuf"></a>
+    <h4>BarrettSetBuf
+    </h4>
+    <span id=funcnameshort>command void <b>BarrettSetBuf</b>()
+    </span><hr>
+    <a name="check_point"></a>
+    <h4>check_point
+    </h4>
+    <span id=funcnameshort>command int <b>check_point</b>(Point *P)
+    </span><hr>
+    <a name="dbl_proj"></a>
+    <h4>dbl_proj
+    </h4>
+    <span id=funcnameshort>command void <b>dbl_proj</b>(Point *P0, NN_DIGIT *Z0, Point *P1, NN_DIGIT *Z1)
+    </span><hr>
+    <a name="gen_private_key"></a>
+    <h4>gen_private_key
+    </h4>
+    <span id=funcnameshort>command void <b>gen_private_key</b>(NN_DIGIT *PrivateKey)
+    </span><hr>
+    <a name="gen_public_key"></a>
+    <h4>gen_public_key
+    </h4>
+    <span id=funcnameshort>command void <b>gen_public_key</b>(Point *PublicKey, NN_DIGIT *PrivateKey)
+    </span><hr>
+    <a name="get_param"></a>
+    <h4>get_param
+    </h4>
+    <span id=funcnameshort>command Params *<b>get_param</b>()
+    </span><hr>
+    <a name="init"></a>
+    <h4>init
+    </h4>
+    <span id=funcnameshort>command void <b>init</b>()
+    </span><hr>
+    <a name="mul"></a>
+    <h4>mul
+    </h4>
+    <span id=funcnameshort>command void <b>mul</b>(Point *P0, Point *P1, NN_DIGIT *n)
+    </span><hr>
+    <a name="octet2point"></a>
+    <h4>octet2point
+    </h4>
+    <span id=funcnameshort>command int <b>octet2point</b>(Point *P, uint8_t *octet, int octet_len)
+    </span><hr>
+    <a name="point2octet"></a>
+    <h4>point2octet
+    </h4>
+    <span id=funcnameshort>command int <b>point2octet</b>(uint8_t *octet, NN_UINT octet_len, Point *P, bool compress)
+    </span><hr>
+    <a name="point_is_zero"></a>
+    <h4>point_is_zero
+    </h4>
+    <span id=funcnameshort>command bool <b>point_is_zero</b>(Point *P)
+    </span><hr>
+    <a name="win_mul"></a>
+    <h4>win_mul
+    </h4>
+    <span id=funcnameshort>command void <b>win_mul</b>(Point *P0, NN_DIGIT *n, Point *pointArray)
+    </span><hr>
+    <a name="win_mul_base"></a>
+    <h4>win_mul_base
+    </h4>
+    <span id=funcnameshort>command void <b>win_mul_base</b>(Point *P0, NN_DIGIT *n)
+    </span><hr>
+    <a name="win_mul_Z"></a>
+    <h4>win_mul_Z
+    </h4>
+    <span id=funcnameshort>command void <b>win_mul_Z</b>(Point *P0, NN_DIGIT *n, Point *pointArray, ZCoordinate *ZList)
+    </span><hr>
+    <a name="win_precompute"></a>
+    <h4>win_precompute
+    </h4>
+    <span id=funcnameshort>command void <b>win_precompute</b>(Point *baseP, Point *pointArray)
+    </span><hr>
+    <a name="win_precompute_Z"></a>
+    <h4>win_precompute_Z
+    </h4>
+    <span id=funcnameshort>command void <b>win_precompute_Z</b>(Point *baseP, Point *pointArray, ZCoordinate *ZList)
+    </span>
+  </body>
+</html>

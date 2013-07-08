@@ -1,0 +1,266 @@
+<html>
+  <head>
+    <LINK rel="stylesheet" href="nesdoc.css" type="text/css" media="screen"><title>Interface: NN</title>
+  </head>
+  <body>
+    <h2>Interface: NN</h2>
+    <b>interface NN</b><p>
+ All new code in this distribution is Copyright 2005 by North Carolina
+ State University. All rights reserved. Redistribution and use in
+ source and binary forms are permitted provided that this entire
+ copyright notice is duplicated in all such copies, and that any
+ documentation, announcements, and other materials related to such
+ distribution and use acknowledge that the software was developed at
+ North Carolina State University, Raleigh, NC. No charge may be made
+ for copies, derivations, or distributions of this material without the
+ express written consent of the copyright holder. Neither the name of
+ the University nor the name of the author may be used to endorse or
+ promote products derived from this material without specific prior
+ written permission.
+ IN NO EVENT SHALL THE NORTH CAROLINA STATE UNIVERSITY BE LIABLE TO ANY
+ PARTY FOR DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL
+ DAMAGES ARISING OUT OF THE USE OF THIS SOFTWARE AND ITS DOCUMENTATION,
+ EVEN IF THE NORTH CAROLINA STATE UNIVERSITY HAS BEEN ADVISED OF THE
+ POSSIBILITY OF SUCH DAMAGE. THE SOFTWARE PROVIDED HEREUNDER IS ON AN
+ "AS IS" BASIS, AND THE NORTH CAROLINA STATE UNIVERSITY HAS NO
+ OBLIGATION TO PROVIDE MAINTENANCE, SUPPORT, UPDATES, ENHANCEMENTS, OR
+ MODIFICATIONS. "
+
+
+    <p><p><div id=heading>Commands</div><div id=funcsig><span id=funcnameshort>command NN_DIGIT <a href="#Add">Add</a>(NN_DIGIT *a, NN_DIGIT *b, NN_DIGIT *c, NN_UINT digits)
+      </span></div><div id=funcsig><span id=funcnameshort>command NN_DIGIT <a href="#AddDigitMult">AddDigitMult</a>(NN_DIGIT *a, NN_DIGIT *b, NN_DIGIT c, NN_DIGIT *d, NN_UINT digits)
+      </span></div><div id=funcsig><span id=funcnameshort>command void <a href="#Assign">Assign</a>(NN_DIGIT *a, NN_DIGIT *b, NN_UINT digits)
+      </span></div><div id=funcsig><span id=funcnameshort>command void <a href="#Assign2Exp">Assign2Exp</a>(NN_DIGIT *a, NN_UINT2 b, NN_UINT digits)
+      </span></div><div id=funcsig><span id=funcnameshort>command void <a href="#AssignDigit">AssignDigit</a>(NN_DIGIT *a, NN_DIGIT b, NN_UINT digits)
+      </span></div><div id=funcsig><span id=funcnameshort>command void <a href="#AssignZero">AssignZero</a>(NN_DIGIT *a, NN_UINT digits)
+      </span></div><div id=funcsig><span id=funcnameshort>command void <a href="#BarrettSetBuf">BarrettSetBuf</a>(Barrett *pbuf)
+      </span></div><div id=funcsig><span id=funcnameshort>command unsigned int <a href="#Bits">Bits</a>(NN_DIGIT *a, NN_UINT digits)
+      </span></div><div id=funcsig><span id=funcnameshort>command int <a href="#Cmp">Cmp</a>(NN_DIGIT *a, NN_DIGIT *b, NN_UINT digits)
+      </span></div><div id=funcsig><span id=funcnameshort>command void <a href="#Decode">Decode</a>(NN_DIGIT *a, NN_UINT digits, unsigned char *b, NN_UINT len)
+      </span></div><div id=funcsig><span id=funcnameshort>command unsigned int <a href="#Digits">Digits</a>(NN_DIGIT *a, NN_UINT digits)
+      </span></div><div id=funcsig><span id=funcnameshort>command void <a href="#Div">Div</a>(NN_DIGIT *a, NN_DIGIT *b, NN_DIGIT *c, NN_UINT cDigits, NN_DIGIT *d, NN_UINT dDigits)
+      </span></div><div id=funcsig><span id=funcnameshort>command void <a href="#Encode">Encode</a>(unsigned char *a, NN_UINT digits, NN_DIGIT *b, NN_UINT len)
+      </span></div><div id=funcsig><span id=funcnameshort>command int <a href="#Equal">Equal</a>(NN_DIGIT *a, NN_DIGIT *b, NN_UINT digits)
+      </span></div><div id=funcsig><span id=funcnameshort>command int <a href="#Even">Even</a>(NN_DIGIT *a, NN_UINT digits)
+      </span></div><div id=funcsig><span id=funcnameshort>command void <a href="#Gcd">Gcd</a>(NN_DIGIT *a, NN_DIGIT *b, NN_DIGIT *c, NN_UINT digits)
+      </span></div><div id=funcsig><span id=funcnameshort>command NN_DIGIT <a href="#LShift">LShift</a>(NN_DIGIT *a, NN_DIGIT *b, NN_UINT c, NN_UINT digits)
+      </span></div><div id=funcsig><span id=funcnameshort>command void <a href="#Mod">Mod</a>(NN_DIGIT *a, NN_DIGIT *b, NN_UINT bDigits, NN_DIGIT *c, NN_UINT cDigits)
+      </span></div><div id=funcsig><span id=funcnameshort>command void <a href="#ModAdd">ModAdd</a>(NN_DIGIT *a, NN_DIGIT *b, NN_DIGIT *c, NN_DIGIT *d, NN_UINT digits)
+      </span></div><div id=funcsig><span id=funcnameshort>command void <a href="#ModBarrett">ModBarrett</a>(NN_DIGIT *a, NN_DIGIT *b, NN_UINT bDigits, NN_DIGIT *c, NN_UINT cDigits)
+      </span></div><div id=funcsig><span id=funcnameshort>command void <a href="#ModBarrettInit">ModBarrettInit</a>(NN_DIGIT *c, NN_UINT cDigits, Barrett *pbuf)
+      </span></div><div id=funcsig><span id=funcnameshort>command void <a href="#ModDiv">ModDiv</a>(NN_DIGIT *a, NN_DIGIT *b, NN_DIGIT *c, NN_DIGIT *d, NN_UINT digits)
+      </span></div><div id=funcsig><span id=funcnameshort>command void <a href="#ModDivOpt">ModDivOpt</a>(NN_DIGIT *a, NN_DIGIT *b, NN_DIGIT *c, NN_DIGIT *d, NN_UINT digits)
+      </span></div><div id=funcsig><span id=funcnameshort>command void <a href="#ModExp">ModExp</a>(NN_DIGIT *a, NN_DIGIT *b, NN_DIGIT *c, NN_UINT cDigits, NN_DIGIT *d, NN_UINT dDigits)
+      </span></div><div id=funcsig><span id=funcnameshort>command void <a href="#ModInv">ModInv</a>(NN_DIGIT *a, NN_DIGIT *b, NN_DIGIT *c, NN_UINT digits)
+      </span></div><div id=funcsig><span id=funcnameshort>command void <a href="#ModMult">ModMult</a>(NN_DIGIT *a, NN_DIGIT *b, NN_DIGIT *c, NN_DIGIT *d, NN_UINT digits)
+      </span></div><div id=funcsig><span id=funcnameshort>command void <a href="#ModMultOpt">ModMultOpt</a>(NN_DIGIT *a, NN_DIGIT *b, NN_DIGIT *c, NN_DIGIT *d, NN_DIGIT *omega, NN_UINT digits)
+      </span></div><div id=funcsig><span id=funcnameshort>command void <a href="#ModNeg">ModNeg</a>(NN_DIGIT *a, NN_DIGIT *b, NN_DIGIT *c, NN_UINT digits)
+      </span></div><div id=funcsig><span id=funcnameshort>command void <a href="#ModSmall">ModSmall</a>(NN_DIGIT *b, NN_DIGIT *c, NN_UINT digits)
+      </span></div><div id=funcsig><span id=funcnameshort>command void <a href="#ModSqr">ModSqr</a>(NN_DIGIT *a, NN_DIGIT *b, NN_DIGIT *d, NN_UINT digits)
+      </span></div><div id=funcsig><span id=funcnameshort>command void <a href="#ModSqrOpt">ModSqrOpt</a>(NN_DIGIT *a, NN_DIGIT *b, NN_DIGIT *d, NN_DIGIT *omega, NN_UINT digits)
+      </span></div><div id=funcsig><span id=funcnameshort>command int <a href="#ModSqrRootOpt">ModSqrRootOpt</a>(NN_DIGIT *a, NN_DIGIT *b, NN_DIGIT *c, NN_UINT digits, NN_DIGIT *omega)
+      </span></div><div id=funcsig><span id=funcnameshort>command void <a href="#ModSub">ModSub</a>(NN_DIGIT *a, NN_DIGIT *b, NN_DIGIT *c, NN_DIGIT *d, NN_UINT digits)
+      </span></div><div id=funcsig><span id=funcnameshort>command void <a href="#Mult">Mult</a>(NN_DIGIT *a, NN_DIGIT *b, NN_DIGIT *c, NN_UINT digits)
+      </span></div><div id=funcsig><span id=funcnameshort>command int <a href="#One">One</a>(NN_DIGIT *a, NN_UINT digits)
+      </span></div><div id=funcsig><span id=funcnameshort>command NN_DIGIT <a href="#RShift">RShift</a>(NN_DIGIT *a, NN_DIGIT *b, NN_UINT c, NN_UINT digits)
+      </span></div><div id=funcsig><span id=funcnameshort>command NN_DIGIT <a href="#Sub">Sub</a>(NN_DIGIT *a, NN_DIGIT *b, NN_DIGIT *c, NN_UINT digits)
+      </span></div><div id=funcsig><span id=funcnameshort>command NN_DIGIT <a href="#TestBit">TestBit</a>(NN_DIGIT *a, int16_t i)
+      </span></div><div id=funcsig><span id=funcnameshort>command int <a href="#Zero">Zero</a>(NN_DIGIT *a, NN_UINT digits)
+      </span></div><p><div id=heading>Commands - Details</div>
+    <a name="Add"></a>
+    <h4>Add
+    </h4>
+    <span id=funcnameshort>command NN_DIGIT <b>Add</b>(NN_DIGIT *a, NN_DIGIT *b, NN_DIGIT *c, NN_UINT digits)
+    </span><hr>
+    <a name="AddDigitMult"></a>
+    <h4>AddDigitMult
+    </h4>
+    <span id=funcnameshort>command NN_DIGIT <b>AddDigitMult</b>(NN_DIGIT *a, NN_DIGIT *b, NN_DIGIT c, NN_DIGIT *d, NN_UINT digits)
+    </span><hr>
+    <a name="Assign"></a>
+    <h4>Assign
+    </h4>
+    <span id=funcnameshort>command void <b>Assign</b>(NN_DIGIT *a, NN_DIGIT *b, NN_UINT digits)
+    </span><hr>
+    <a name="Assign2Exp"></a>
+    <h4>Assign2Exp
+    </h4>
+    <span id=funcnameshort>command void <b>Assign2Exp</b>(NN_DIGIT *a, NN_UINT2 b, NN_UINT digits)
+    </span><hr>
+    <a name="AssignDigit"></a>
+    <h4>AssignDigit
+    </h4>
+    <span id=funcnameshort>command void <b>AssignDigit</b>(NN_DIGIT *a, NN_DIGIT b, NN_UINT digits)
+    </span><hr>
+    <a name="AssignZero"></a>
+    <h4>AssignZero
+    </h4>
+    <span id=funcnameshort>command void <b>AssignZero</b>(NN_DIGIT *a, NN_UINT digits)
+    </span><hr>
+    <a name="BarrettSetBuf"></a>
+    <h4>BarrettSetBuf
+    </h4>
+    <span id=funcnameshort>command void <b>BarrettSetBuf</b>(Barrett *pbuf)
+    </span><hr>
+    <a name="Bits"></a>
+    <h4>Bits
+    </h4>
+    <span id=funcnameshort>command unsigned int <b>Bits</b>(NN_DIGIT *a, NN_UINT digits)
+    </span><hr>
+    <a name="Cmp"></a>
+    <h4>Cmp
+    </h4>
+    <span id=funcnameshort>command int <b>Cmp</b>(NN_DIGIT *a, NN_DIGIT *b, NN_UINT digits)
+    </span><hr>
+    <a name="Decode"></a>
+    <h4>Decode
+    </h4>
+    <span id=funcnameshort>command void <b>Decode</b>(NN_DIGIT *a, NN_UINT digits, unsigned char *b, NN_UINT len)
+    </span><hr>
+    <a name="Digits"></a>
+    <h4>Digits
+    </h4>
+    <span id=funcnameshort>command unsigned int <b>Digits</b>(NN_DIGIT *a, NN_UINT digits)
+    </span><hr>
+    <a name="Div"></a>
+    <h4>Div
+    </h4>
+    <span id=funcnameshort>command void <b>Div</b>(NN_DIGIT *a, NN_DIGIT *b, NN_DIGIT *c, NN_UINT cDigits, NN_DIGIT *d, NN_UINT dDigits)
+    </span><hr>
+    <a name="Encode"></a>
+    <h4>Encode
+    </h4>
+    <span id=funcnameshort>command void <b>Encode</b>(unsigned char *a, NN_UINT digits, NN_DIGIT *b, NN_UINT len)
+    </span><hr>
+    <a name="Equal"></a>
+    <h4>Equal
+    </h4>
+    <span id=funcnameshort>command int <b>Equal</b>(NN_DIGIT *a, NN_DIGIT *b, NN_UINT digits)
+    </span><hr>
+    <a name="Even"></a>
+    <h4>Even
+    </h4>
+    <span id=funcnameshort>command int <b>Even</b>(NN_DIGIT *a, NN_UINT digits)
+    </span><hr>
+    <a name="Gcd"></a>
+    <h4>Gcd
+    </h4>
+    <span id=funcnameshort>command void <b>Gcd</b>(NN_DIGIT *a, NN_DIGIT *b, NN_DIGIT *c, NN_UINT digits)
+    </span><hr>
+    <a name="LShift"></a>
+    <h4>LShift
+    </h4>
+    <span id=funcnameshort>command NN_DIGIT <b>LShift</b>(NN_DIGIT *a, NN_DIGIT *b, NN_UINT c, NN_UINT digits)
+    </span><hr>
+    <a name="Mod"></a>
+    <h4>Mod
+    </h4>
+    <span id=funcnameshort>command void <b>Mod</b>(NN_DIGIT *a, NN_DIGIT *b, NN_UINT bDigits, NN_DIGIT *c, NN_UINT cDigits)
+    </span><hr>
+    <a name="ModAdd"></a>
+    <h4>ModAdd
+    </h4>
+    <span id=funcnameshort>command void <b>ModAdd</b>(NN_DIGIT *a, NN_DIGIT *b, NN_DIGIT *c, NN_DIGIT *d, NN_UINT digits)
+    </span><hr>
+    <a name="ModBarrett"></a>
+    <h4>ModBarrett
+    </h4>
+    <span id=funcnameshort>command void <b>ModBarrett</b>(NN_DIGIT *a, NN_DIGIT *b, NN_UINT bDigits, NN_DIGIT *c, NN_UINT cDigits)
+    </span><hr>
+    <a name="ModBarrettInit"></a>
+    <h4>ModBarrettInit
+    </h4>
+    <span id=funcnameshort>command void <b>ModBarrettInit</b>(NN_DIGIT *c, NN_UINT cDigits, Barrett *pbuf)
+    </span><hr>
+    <a name="ModDiv"></a>
+    <h4>ModDiv
+    </h4>
+    <span id=funcnameshort>command void <b>ModDiv</b>(NN_DIGIT *a, NN_DIGIT *b, NN_DIGIT *c, NN_DIGIT *d, NN_UINT digits)
+    </span><hr>
+    <a name="ModDivOpt"></a>
+    <h4>ModDivOpt
+    </h4>
+    <span id=funcnameshort>command void <b>ModDivOpt</b>(NN_DIGIT *a, NN_DIGIT *b, NN_DIGIT *c, NN_DIGIT *d, NN_UINT digits)
+    </span><hr>
+    <a name="ModExp"></a>
+    <h4>ModExp
+    </h4>
+    <span id=funcnameshort>command void <b>ModExp</b>(NN_DIGIT *a, NN_DIGIT *b, NN_DIGIT *c, NN_UINT cDigits, NN_DIGIT *d, NN_UINT dDigits)
+    </span><hr>
+    <a name="ModInv"></a>
+    <h4>ModInv
+    </h4>
+    <span id=funcnameshort>command void <b>ModInv</b>(NN_DIGIT *a, NN_DIGIT *b, NN_DIGIT *c, NN_UINT digits)
+    </span><hr>
+    <a name="ModMult"></a>
+    <h4>ModMult
+    </h4>
+    <span id=funcnameshort>command void <b>ModMult</b>(NN_DIGIT *a, NN_DIGIT *b, NN_DIGIT *c, NN_DIGIT *d, NN_UINT digits)
+    </span><hr>
+    <a name="ModMultOpt"></a>
+    <h4>ModMultOpt
+    </h4>
+    <span id=funcnameshort>command void <b>ModMultOpt</b>(NN_DIGIT *a, NN_DIGIT *b, NN_DIGIT *c, NN_DIGIT *d, NN_DIGIT *omega, NN_UINT digits)
+    </span><hr>
+    <a name="ModNeg"></a>
+    <h4>ModNeg
+    </h4>
+    <span id=funcnameshort>command void <b>ModNeg</b>(NN_DIGIT *a, NN_DIGIT *b, NN_DIGIT *c, NN_UINT digits)
+    </span><hr>
+    <a name="ModSmall"></a>
+    <h4>ModSmall
+    </h4>
+    <span id=funcnameshort>command void <b>ModSmall</b>(NN_DIGIT *b, NN_DIGIT *c, NN_UINT digits)
+    </span><hr>
+    <a name="ModSqr"></a>
+    <h4>ModSqr
+    </h4>
+    <span id=funcnameshort>command void <b>ModSqr</b>(NN_DIGIT *a, NN_DIGIT *b, NN_DIGIT *d, NN_UINT digits)
+    </span><hr>
+    <a name="ModSqrOpt"></a>
+    <h4>ModSqrOpt
+    </h4>
+    <span id=funcnameshort>command void <b>ModSqrOpt</b>(NN_DIGIT *a, NN_DIGIT *b, NN_DIGIT *d, NN_DIGIT *omega, NN_UINT digits)
+    </span><hr>
+    <a name="ModSqrRootOpt"></a>
+    <h4>ModSqrRootOpt
+    </h4>
+    <span id=funcnameshort>command int <b>ModSqrRootOpt</b>(NN_DIGIT *a, NN_DIGIT *b, NN_DIGIT *c, NN_UINT digits, NN_DIGIT *omega)
+    </span><hr>
+    <a name="ModSub"></a>
+    <h4>ModSub
+    </h4>
+    <span id=funcnameshort>command void <b>ModSub</b>(NN_DIGIT *a, NN_DIGIT *b, NN_DIGIT *c, NN_DIGIT *d, NN_UINT digits)
+    </span><hr>
+    <a name="Mult"></a>
+    <h4>Mult
+    </h4>
+    <span id=funcnameshort>command void <b>Mult</b>(NN_DIGIT *a, NN_DIGIT *b, NN_DIGIT *c, NN_UINT digits)
+    </span><hr>
+    <a name="One"></a>
+    <h4>One
+    </h4>
+    <span id=funcnameshort>command int <b>One</b>(NN_DIGIT *a, NN_UINT digits)
+    </span><hr>
+    <a name="RShift"></a>
+    <h4>RShift
+    </h4>
+    <span id=funcnameshort>command NN_DIGIT <b>RShift</b>(NN_DIGIT *a, NN_DIGIT *b, NN_UINT c, NN_UINT digits)
+    </span><hr>
+    <a name="Sub"></a>
+    <h4>Sub
+    </h4>
+    <span id=funcnameshort>command NN_DIGIT <b>Sub</b>(NN_DIGIT *a, NN_DIGIT *b, NN_DIGIT *c, NN_UINT digits)
+    </span><hr>
+    <a name="TestBit"></a>
+    <h4>TestBit
+    </h4>
+    <span id=funcnameshort>command NN_DIGIT <b>TestBit</b>(NN_DIGIT *a, int16_t i)
+    </span><hr>
+    <a name="Zero"></a>
+    <h4>Zero
+    </h4>
+    <span id=funcnameshort>command int <b>Zero</b>(NN_DIGIT *a, NN_UINT digits)
+    </span>
+  </body>
+</html>

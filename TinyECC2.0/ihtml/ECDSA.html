@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <LINK rel="stylesheet" href="nesdoc.css" type="text/css" media="screen"><title>Interface: ECDSA</title>
+  </head>
+  <body>
+    <h2>Interface: ECDSA</h2>
+    <b>interface ECDSA</b><p>
+ interface for ECDSA
+
+ Author: An Liu
+ Date: 09/15/2005
+
+    <p><p><div id=heading>Commands</div><div id=funcsig><span id=funcnameshort>command error_t <a href="#init">init</a>(Point *pKey)
+      </span></div><div id=funcsig><span id=funcnameshort>command void <a href="#sign">sign</a>(uint8_t *msg, uint8_t len, NN_DIGIT *r, NN_DIGIT *s, NN_DIGIT *d)
+      </span></div><div id=funcsig><span id=funcnameshort>command uint8_t <a href="#verify">verify</a>(uint8_t *msg, uint8_t len, NN_DIGIT *r, NN_DIGIT *s, Point *Q)
+      </span></div><p><div id=heading>Commands - Details</div>
+    <a name="init"></a>
+    <h4>init
+    </h4>
+    <span id=funcnameshort>command error_t <b>init</b>(Point *pKey)
+    </span><hr>
+    <a name="sign"></a>
+    <h4>sign
+    </h4>
+    <span id=funcnameshort>command void <b>sign</b>(uint8_t *msg, uint8_t len, NN_DIGIT *r, NN_DIGIT *s, NN_DIGIT *d)
+    </span><hr>
+    <a name="verify"></a>
+    <h4>verify
+    </h4>
+    <span id=funcnameshort>command uint8_t <b>verify</b>(uint8_t *msg, uint8_t len, NN_DIGIT *r, NN_DIGIT *s, Point *Q)
+    </span>
+  </body>
+</html>

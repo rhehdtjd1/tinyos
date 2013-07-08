@@ -1,0 +1,170 @@
+<?xml version="1.0" ?>
+<component abstract="" loc="57:/opt/tinyos-2.0.2/tos/lib/power/AsyncStdControlPowerManagerC.nc" nicename="tos.lib.power.AsyncStdControlPowerManagerC" qname="AsyncStdControlPowerManagerC">
+      <documentation loc="31:/opt/tinyos-2.0.2/tos/lib/power/AsyncStdControlPowerManagerC.nc">
+        <short>
+ Please refer to TEP 115 for more information about this component and its
+ intended use.&lt;br&gt;&lt;br&gt;
+
+ This is the internal implementation of the standard power management
+ policy for managing the power states of non-virtualized devices.</short>
+        <long>
+ Please refer to TEP 115 for more information about this component and its
+ intended use.&lt;br&gt;&lt;br&gt;
+
+ This is the internal implementation of the standard power management
+ policy for managing the power states of non-virtualized devices.
+ Non-virtualized devices are shared using a parameterized Resource
+ interface, and are powered down according to some policy whenever there
+ are no more pending requests to that Resource.  The policy implemented
+ by this component is to power down a device as soon as it becomes free.
+ Such a policy is useful whenever a device has a negligible wake-up
+ latency.  There is no cost associated with waiting for the device to
+ power up, so it can be powered on and off as often as possible.&lt;br&gt;&lt;br&gt;
+
+ Powerdown of the device is done through the &lt;code&gt;AsyncStdControl&lt;/code&gt;
+ interface, so this component can only be used with those devices that
+ provide that interface.&lt;br&gt;&lt;br&gt;
+
+ For devices providing either the &lt;code&gt;StdControl&lt;/code&gt; or
+ &lt;code&gt;SplitControl&lt;/code&gt; interfaces, please use either the
+ &lt;code&gt;StdControlPowerManagerC&lt;/code&gt; component or the
+ &lt;code&gt;SplitControlPowerManagerC&lt;/code&gt; component respectively.
+ 
+ @author Kevin Klues (klueska@cs.wustl.edu)
+</long>
+      </documentation>
+      <parameters>
+      </parameters>
+      <configuration/>
+      <wiring>
+        <wire loc="70:/opt/tinyos-2.0.2/tos/lib/power/AsyncStdControlPowerManagerC.nc">
+          <from><interface-ref name="AsyncStdControl" ref="0x40f31b08" scoped=""/></from>
+          <to><interface-ref name="AsyncStdControl" ref="0x40f05010" scoped=""/></to>
+        </wire>
+        <wire loc="72:/opt/tinyos-2.0.2/tos/lib/power/AsyncStdControlPowerManagerC.nc">
+          <from><interface-ref name="PowerDownCleanup" ref="0x40f31f00" scoped=""/></from>
+          <to><interface-ref name="PowerDownCleanup" ref="0x40f04010" scoped=""/></to>
+        </wire>
+        <wire loc="74:/opt/tinyos-2.0.2/tos/lib/power/AsyncStdControlPowerManagerC.nc">
+          <from><interface-ref name="ResourceDefaultOwner" ref="0x40f39230" scoped=""/></from>
+          <to><interface-ref name="ResourceDefaultOwner" ref="0x40f043f8" scoped=""/></to>
+        </wire>
+        <wire loc="75:/opt/tinyos-2.0.2/tos/lib/power/AsyncStdControlPowerManagerC.nc">
+          <from><interface-ref name="ArbiterInfo" ref="0x40f398c8" scoped=""/></from>
+          <to><interface-ref name="ArbiterInfo" ref="0x40f04b00" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification><interface loc="62:/opt/tinyos-2.0.2/tos/lib/power/AsyncStdControlPowerManagerC.nc" name="PowerDownCleanup" provided="0" ref="0x40f04010">
+      <component-ref nicename="tos.lib.power.AsyncStdControlPowerManagerC" qname="AsyncStdControlPowerManagerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="PowerDownCleanup" ref="0x40f04010" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.power.PowerDownCleanup" qname="PowerDownCleanup"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="cleanup" ref="0x40f041e8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="63:/opt/tinyos-2.0.2/tos/lib/power/AsyncStdControlPowerManagerC.nc" name="ResourceDefaultOwner" provided="0" ref="0x40f043f8">
+      <component-ref nicename="tos.lib.power.AsyncStdControlPowerManagerC" qname="AsyncStdControlPowerManagerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ResourceDefaultOwner" ref="0x40f043f8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ResourceDefaultOwner" qname="ResourceDefaultOwner"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="release" ref="0x40f045d0" scoped=""/>
+        <function-ref name="requested" ref="0x40f046b0" scoped=""/>
+        <function-ref name="granted" ref="0x40f04790" scoped=""/>
+        <function-ref name="isOwner" ref="0x40f04870" scoped=""/>
+        <function-ref name="immediateRequested" ref="0x40f04950" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="60:/opt/tinyos-2.0.2/tos/lib/power/AsyncStdControlPowerManagerC.nc" name="AsyncStdControl" provided="0" ref="0x40f05010">
+      <component-ref nicename="tos.lib.power.AsyncStdControlPowerManagerC" qname="AsyncStdControlPowerManagerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="AsyncStdControl" ref="0x40f05010" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AsyncStdControl" qname="AsyncStdControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="start" ref="0x40f051e8" scoped=""/>
+        <function-ref name="stop" ref="0x40f052c8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="64:/opt/tinyos-2.0.2/tos/lib/power/AsyncStdControlPowerManagerC.nc" name="ArbiterInfo" provided="0" ref="0x40f04b00">
+      <component-ref nicename="tos.lib.power.AsyncStdControlPowerManagerC" qname="AsyncStdControlPowerManagerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ArbiterInfo" ref="0x40f04b00" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ArbiterInfo" qname="ArbiterInfo"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="inUse" ref="0x40f04cd8" scoped=""/>
+        <function-ref name="userId" ref="0x40f04db8" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="50:/opt/tinyos-2.0.2/tos/lib/power/AsyncPowerManagerP.nc" name="AsyncStdControl" provided="0" ref="0x40f31b08">
+      <component-ref nicename="tos.lib.power.AsyncPowerManagerP" qname="AsyncStdControlPowerManagerC.PowerManager"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="AsyncStdControl" ref="0x40f31b08" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AsyncStdControl" qname="AsyncStdControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="start" ref="0x40f31ce0" scoped=""/>
+        <function-ref name="stop" ref="0x40f31dc0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="53:/opt/tinyos-2.0.2/tos/lib/power/AsyncPowerManagerP.nc" name="ResourceDefaultOwner" provided="0" ref="0x40f39230">
+      <component-ref nicename="tos.lib.power.AsyncPowerManagerP" qname="AsyncStdControlPowerManagerC.PowerManager"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ResourceDefaultOwner" ref="0x40f39230" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ResourceDefaultOwner" qname="ResourceDefaultOwner"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="release" ref="0x40f39408" scoped=""/>
+        <function-ref name="requested" ref="0x40f394e8" scoped=""/>
+        <function-ref name="granted" ref="0x40f395c8" scoped=""/>
+        <function-ref name="isOwner" ref="0x40f396a8" scoped=""/>
+        <function-ref name="immediateRequested" ref="0x40f39788" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="54:/opt/tinyos-2.0.2/tos/lib/power/AsyncPowerManagerP.nc" name="ArbiterInfo" provided="0" ref="0x40f398c8">
+      <component-ref nicename="tos.lib.power.AsyncPowerManagerP" qname="AsyncStdControlPowerManagerC.PowerManager"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ArbiterInfo" ref="0x40f398c8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ArbiterInfo" qname="ArbiterInfo"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="inUse" ref="0x40f39aa0" scoped=""/>
+        <function-ref name="userId" ref="0x40f39b80" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="52:/opt/tinyos-2.0.2/tos/lib/power/AsyncPowerManagerP.nc" name="PowerDownCleanup" provided="0" ref="0x40f31f00">
+      <component-ref nicename="tos.lib.power.AsyncPowerManagerP" qname="AsyncStdControlPowerManagerC.PowerManager"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="PowerDownCleanup" ref="0x40f31f00" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.power.PowerDownCleanup" qname="PowerDownCleanup"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="cleanup" ref="0x40f390f0" scoped=""/>
+      </interface-functions>
+    </interface><component abstract="" loc="48(AsyncStdControlPowerManagerC.PowerManager):/opt/tinyos-2.0.2/tos/lib/power/AsyncPowerManagerP.nc" nicename="tos.lib.power.AsyncPowerManagerP" qname="AsyncStdControlPowerManagerC.PowerManager">
+      <documentation loc="31:/opt/tinyos-2.0.2/tos/lib/power/AsyncPowerManagerP.nc">
+        <short>
+ Please refer to TEP 115 for more information about this component and its
+ intended use.&lt;br&gt;&lt;br&gt;
+
+ This is the internal implementation of the standard power management
+ policy for managing the power states of non-virtualized devices.</short>
+        <long>
+ Please refer to TEP 115 for more information about this component and its
+ intended use.&lt;br&gt;&lt;br&gt;
+
+ This is the internal implementation of the standard power management
+ policy for managing the power states of non-virtualized devices.
+ Non-virtualized devices are shared using a parameterized Resource
+ interface, and are powered down according to some policy whenever there
+ are no more pending requests to that Resource.  The policy implemented
+ by this component is to power down a device as soon as it becomes free.
+ Such a policy is useful whenever a device has a negligible wake-up
+ latency.  There is no cost associated with waiting for the device to
+ power up, so it can be powered on and off as often as possible.
+ 
+ @author Kevin Klues (klueska@cs.wustl.edu)
+</long>
+      </documentation>
+      <instance>
+        <component-ref nicename="tos.lib.power.AsyncPowerManagerP" qname="AsyncPowerManagerP"/>
+      </instance>
+      <module/>
+    </component></referenced></component>

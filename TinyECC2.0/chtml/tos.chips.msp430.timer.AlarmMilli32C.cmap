@@ -1,0 +1,15 @@
+<area shape="rect" href="../chtml/tos.lib.timer.TransformAlarmC.html" title="TransformAlarmC\n(Transform)" alt="" coords="95,117,236,165">
+<area shape="rect" href="../ihtml/tos.lib.timer.Alarm.html" title="Alarm&lt;TMilli, uint32_t&gt;" alt="" coords="165,78,304,93">
+<area shape="rect" href="../ihtml/tos.lib.timer.Alarm.html" title="Alarm&lt;TMilli, uint32_t&gt;" alt="" coords="161,49,169,57">
+<area shape="rect" href="../ihtml/tos.lib.timer.Alarm.html" title="Alarm&lt;TMilli, uint32_t&gt;" alt="" coords="161,113,169,121">
+<area shape="rect" href="../chtml/tos.chips.msp430.timer.Alarm32khz16C.html" title="Alarm32khz16C\n(AlarmFrom)" alt="" coords="269,229,411,288">
+<area shape="rect" href="../ihtml/tos.lib.timer.Alarm.html" title="Alarm&lt;T32khz, uint16_t&gt;" alt="" coords="249,190,393,205">
+<area shape="rect" href="../ihtml/tos.lib.timer.Alarm.html" title="Alarm&lt;T32khz, uint16_t&gt;" alt="" coords="191,161,199,169">
+<area shape="rect" href="../ihtml/tos.lib.timer.Alarm.html" title="Alarm&lt;T32khz, uint16_t&gt;" alt="" coords="283,225,291,233">
+<area shape="rect" href="../chtml/tos.chips.msp430.timer.CounterMilli32C.html" title="CounterMilli32C" alt="" coords="5,229,147,288">
+<area shape="rect" href="../ihtml/tos.lib.timer.Counter.html" title="Counter&lt;TMilli, uint32_t&gt;" alt="" coords="77,190,224,205">
+<area shape="rect" href="../ihtml/tos.lib.timer.Counter.html" title="Counter&lt;TMilli, uint32_t&gt;" alt="" coords="97,161,105,169">
+<area shape="rect" href="../ihtml/tos.lib.timer.Counter.html" title="Counter&lt;TMilli, uint32_t&gt;" alt="" coords="67,225,75,233">
+<area shape="rect" href="../ihtml/tos.interfaces.Init.html" title="Init" alt="" coords="407,190,428,205">
+<area shape="rect" href="../ihtml/tos.interfaces.Init.html" title="Init" alt="" coords="416,161,424,169">
+<area shape="rect" href="../ihtml/tos.interfaces.Init.html" title="Init" alt="" coords="373,225,381,233">

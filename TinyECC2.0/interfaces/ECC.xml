@@ -1,0 +1,683 @@
+<?xml version="1.0" ?>
+<interfacedef loc="34:ECC.nc" nicename="ECC" qname="ECC">
+      <documentation loc="26:ECC.nc">
+        <short>
+ Interface for ECC operation
+ $Id: ECC.nc,v 1.6 2007/11/02 22:36:39 aliu3 Exp $
+</short>
+      </documentation>
+      <function command="" loc="100:ECC.nc" name="get_param" provided="0" ref="0x4069a430">
+        <interfacedef-ref nicename="ECC" qname="ECC"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-pointer alignment="I:2" size="I:2">
+            <type-tag alignment="I:2" size="I:158"><struct-ref name="Params" ref="0x40567898"/>
+              <typename><typedef-ref name="Params" ref="0x405669e8"/></typename>
+            </type-tag>
+          </type-pointer>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="45:ECC.nc" name="point2octet" provided="0" ref="0x4068fa80">
+        <interfacedef-ref nicename="ECC" qname="ECC"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:2" cname="int" size="I:2"/>
+          <function-parameters>
+            <type-pointer alignment="I:2" size="I:2">
+              <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+                <typename><typedef-ref name="uint8_t" ref="0x401992d8"/></typename>
+              </type-int>
+            </type-pointer>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="NN_UINT" ref="0x4056a138"/></typename>
+            </type-int>
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:44"><struct-ref name="Point" ref="0x405683e0"/>
+                <typename><typedef-ref name="Point" ref="0x40568e18"/></typename>
+              </type-tag>
+            </type-pointer>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="bool" ref="0x402f6960"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="45:ECC.nc" name="octet" ref="0x4068f310">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+                <typename><typedef-ref name="uint8_t" ref="0x401992d8"/></typename>
+              </type-int>
+            </type-pointer>
+          </variable>
+          <variable loc="45:ECC.nc" name="octet_len" ref="0x4068f530">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="NN_UINT" ref="0x4056a138"/></typename>
+            </type-int>
+          </variable>
+          <variable loc="45:ECC.nc" name="P" ref="0x4068f710">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:44"><struct-ref name="Point" ref="0x405683e0"/>
+                <typename><typedef-ref name="Point" ref="0x40568e18"/></typename>
+              </type-tag>
+            </type-pointer>
+          </variable>
+          <variable loc="45:ECC.nc" name="compress" ref="0x4068f910">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="bool" ref="0x402f6960"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="85:ECC.nc" name="win_mul" provided="0" ref="0x4069d278">
+        <interfacedef-ref nicename="ECC" qname="ECC"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:44"><struct-ref name="Point" ref="0x405683e0"/>
+                <typename><typedef-ref name="Point" ref="0x40568e18"/></typename>
+              </type-tag>
+            </type-pointer>
+            <type-pointer alignment="I:2" size="I:2">
+              <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+                <typename><typedef-ref name="NN_DIGIT" ref="0x4056c6e0"/></typename>
+              </type-int>
+            </type-pointer>
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:44"><struct-ref name="Point" ref="0x405683e0"/>
+                <typename><typedef-ref name="Point" ref="0x40568e18"/></typename>
+              </type-tag>
+            </type-pointer>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="85:ECC.nc" name="P0" ref="0x4069ecc8">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:44"><struct-ref name="Point" ref="0x405683e0"/>
+                <typename><typedef-ref name="Point" ref="0x40568e18"/></typename>
+              </type-tag>
+            </type-pointer>
+          </variable>
+          <variable loc="85:ECC.nc" name="n" ref="0x4069eec8">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+                <typename><typedef-ref name="NN_DIGIT" ref="0x4056c6e0"/></typename>
+              </type-int>
+            </type-pointer>
+          </variable>
+          <variable loc="85:ECC.nc" name="pointArray" ref="0x4069d110">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:44"><struct-ref name="Point" ref="0x405683e0"/>
+                <typename><typedef-ref name="Point" ref="0x40568e18"/></typename>
+              </type-tag>
+            </type-pointer>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="40:ECC.nc" name="gen_private_key" provided="0" ref="0x406906c8">
+        <interfacedef-ref nicename="ECC" qname="ECC"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-pointer alignment="I:2" size="I:2">
+              <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+                <typename><typedef-ref name="NN_DIGIT" ref="0x4056c6e0"/></typename>
+              </type-int>
+            </type-pointer>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="40:ECC.nc" name="PrivateKey" ref="0x40690570">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+                <typename><typedef-ref name="NN_DIGIT" ref="0x4056c6e0"/></typename>
+              </type-int>
+            </type-pointer>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="94:ECC.nc" name="win_mul_Z" provided="0" ref="0x4069a010">
+        <interfacedef-ref nicename="ECC" qname="ECC"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:44"><struct-ref name="Point" ref="0x405683e0"/>
+                <typename><typedef-ref name="Point" ref="0x40568e18"/></typename>
+              </type-tag>
+            </type-pointer>
+            <type-pointer alignment="I:2" size="I:2">
+              <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+                <typename><typedef-ref name="NN_DIGIT" ref="0x4056c6e0"/></typename>
+              </type-int>
+            </type-pointer>
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:44"><struct-ref name="Point" ref="0x405683e0"/>
+                <typename><typedef-ref name="Point" ref="0x40568e18"/></typename>
+              </type-tag>
+            </type-pointer>
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:22"><struct-ref name="ZCoordinate" ref="0x40567010"/>
+                <typename><typedef-ref name="ZCoordinate" ref="0x405676d8"/></typename>
+              </type-tag>
+            </type-pointer>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="94:ECC.nc" name="P0" ref="0x4069c7e0">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:44"><struct-ref name="Point" ref="0x405683e0"/>
+                <typename><typedef-ref name="Point" ref="0x40568e18"/></typename>
+              </type-tag>
+            </type-pointer>
+          </variable>
+          <variable loc="94:ECC.nc" name="n" ref="0x4069c9e0">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+                <typename><typedef-ref name="NN_DIGIT" ref="0x4056c6e0"/></typename>
+              </type-int>
+            </type-pointer>
+          </variable>
+          <variable loc="94:ECC.nc" name="pointArray" ref="0x4069cc18">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:44"><struct-ref name="Point" ref="0x405683e0"/>
+                <typename><typedef-ref name="Point" ref="0x40568e18"/></typename>
+              </type-tag>
+            </type-pointer>
+          </variable>
+          <variable loc="94:ECC.nc" name="ZList" ref="0x4069ce58">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:22"><struct-ref name="ZCoordinate" ref="0x40567010"/>
+                <typename><typedef-ref name="ZCoordinate" ref="0x405676d8"/></typename>
+              </type-tag>
+            </type-pointer>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="47:ECC.nc" name="octet2point" provided="0" ref="0x406a43c8">
+        <interfacedef-ref nicename="ECC" qname="ECC"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:2" cname="int" size="I:2"/>
+          <function-parameters>
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:44"><struct-ref name="Point" ref="0x405683e0"/>
+                <typename><typedef-ref name="Point" ref="0x40568e18"/></typename>
+              </type-tag>
+            </type-pointer>
+            <type-pointer alignment="I:2" size="I:2">
+              <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+                <typename><typedef-ref name="uint8_t" ref="0x401992d8"/></typename>
+              </type-int>
+            </type-pointer>
+            <type-int alignment="I:2" cname="int" size="I:2"/>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="47:ECC.nc" name="P" ref="0x4068fe58">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:44"><struct-ref name="Point" ref="0x405683e0"/>
+                <typename><typedef-ref name="Point" ref="0x40568e18"/></typename>
+              </type-tag>
+            </type-pointer>
+          </variable>
+          <variable loc="47:ECC.nc" name="octet" ref="0x406a4088">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+                <typename><typedef-ref name="uint8_t" ref="0x401992d8"/></typename>
+              </type-int>
+            </type-pointer>
+          </variable>
+          <variable loc="47:ECC.nc" name="octet_len" ref="0x406a4260">
+            <type-int alignment="I:2" cname="int" size="I:2"/>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="38:ECC.nc" name="init" provided="0" ref="0x406900f8">
+        <interfacedef-ref nicename="ECC" qname="ECC"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="69:ECC.nc" name="add_proj" provided="0" ref="0x406a1b78">
+        <interfacedef-ref nicename="ECC" qname="ECC"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:44"><struct-ref name="Point" ref="0x405683e0"/>
+                <typename><typedef-ref name="Point" ref="0x40568e18"/></typename>
+              </type-tag>
+            </type-pointer>
+            <type-pointer alignment="I:2" size="I:2">
+              <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+                <typename><typedef-ref name="NN_DIGIT" ref="0x4056c6e0"/></typename>
+              </type-int>
+            </type-pointer>
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:44"><struct-ref name="Point" ref="0x405683e0"/>
+                <typename><typedef-ref name="Point" ref="0x40568e18"/></typename>
+              </type-tag>
+            </type-pointer>
+            <type-pointer alignment="I:2" size="I:2">
+              <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+                <typename><typedef-ref name="NN_DIGIT" ref="0x4056c6e0"/></typename>
+              </type-int>
+            </type-pointer>
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:44"><struct-ref name="Point" ref="0x405683e0"/>
+                <typename><typedef-ref name="Point" ref="0x40568e18"/></typename>
+              </type-tag>
+            </type-pointer>
+            <type-pointer alignment="I:2" size="I:2">
+              <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+                <typename><typedef-ref name="NN_DIGIT" ref="0x4056c6e0"/></typename>
+              </type-int>
+            </type-pointer>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="69:ECC.nc" name="P0" ref="0x406a1010">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:44"><struct-ref name="Point" ref="0x405683e0"/>
+                <typename><typedef-ref name="Point" ref="0x40568e18"/></typename>
+              </type-tag>
+            </type-pointer>
+          </variable>
+          <variable loc="69:ECC.nc" name="Z0" ref="0x406a1218">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+                <typename><typedef-ref name="NN_DIGIT" ref="0x4056c6e0"/></typename>
+              </type-int>
+            </type-pointer>
+          </variable>
+          <variable loc="69:ECC.nc" name="P1" ref="0x406a1400">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:44"><struct-ref name="Point" ref="0x405683e0"/>
+                <typename><typedef-ref name="Point" ref="0x40568e18"/></typename>
+              </type-tag>
+            </type-pointer>
+          </variable>
+          <variable loc="69:ECC.nc" name="Z1" ref="0x406a1608">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+                <typename><typedef-ref name="NN_DIGIT" ref="0x4056c6e0"/></typename>
+              </type-int>
+            </type-pointer>
+          </variable>
+          <variable loc="69:ECC.nc" name="P2" ref="0x406a17f0">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:44"><struct-ref name="Point" ref="0x405683e0"/>
+                <typename><typedef-ref name="Point" ref="0x40568e18"/></typename>
+              </type-tag>
+            </type-pointer>
+          </variable>
+          <variable loc="69:ECC.nc" name="Z2" ref="0x406a19f8">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+                <typename><typedef-ref name="NN_DIGIT" ref="0x4056c6e0"/></typename>
+              </type-int>
+            </type-pointer>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="54:ECC.nc" name="BarrettSetBuf" provided="0" ref="0x406a2298">
+        <interfacedef-ref nicename="ECC" qname="ECC"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="51:ECC.nc" name="point_is_zero" provided="0" ref="0x406a4e70">
+        <interfacedef-ref nicename="ECC" qname="ECC"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="bool" ref="0x402f6960"/></typename>
+          </type-int>
+          <function-parameters>
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:44"><struct-ref name="Point" ref="0x405683e0"/>
+                <typename><typedef-ref name="Point" ref="0x40568e18"/></typename>
+              </type-tag>
+            </type-pointer>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="51:ECC.nc" name="P" ref="0x406a4d18">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:44"><struct-ref name="Point" ref="0x405683e0"/>
+                <typename><typedef-ref name="Point" ref="0x40568e18"/></typename>
+              </type-tag>
+            </type-pointer>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="76:ECC.nc" name="mul" provided="0" ref="0x4069e098">
+        <interfacedef-ref nicename="ECC" qname="ECC"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:44"><struct-ref name="Point" ref="0x405683e0"/>
+                <typename><typedef-ref name="Point" ref="0x40568e18"/></typename>
+              </type-tag>
+            </type-pointer>
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:44"><struct-ref name="Point" ref="0x405683e0"/>
+                <typename><typedef-ref name="Point" ref="0x40568e18"/></typename>
+              </type-tag>
+            </type-pointer>
+            <type-pointer alignment="I:2" size="I:2">
+              <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+                <typename><typedef-ref name="NN_DIGIT" ref="0x4056c6e0"/></typename>
+              </type-int>
+            </type-pointer>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="76:ECC.nc" name="P0" ref="0x406a0b18">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:44"><struct-ref name="Point" ref="0x405683e0"/>
+                <typename><typedef-ref name="Point" ref="0x40568e18"/></typename>
+              </type-tag>
+            </type-pointer>
+          </variable>
+          <variable loc="76:ECC.nc" name="P1" ref="0x406a0d00">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:44"><struct-ref name="Point" ref="0x405683e0"/>
+                <typename><typedef-ref name="Point" ref="0x40568e18"/></typename>
+              </type-tag>
+            </type-pointer>
+          </variable>
+          <variable loc="76:ECC.nc" name="n" ref="0x406a0f00">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+                <typename><typedef-ref name="NN_DIGIT" ref="0x4056c6e0"/></typename>
+              </type-int>
+            </type-pointer>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="72:ECC.nc" name="dbl_proj" provided="0" ref="0x406a0778">
+        <interfacedef-ref nicename="ECC" qname="ECC"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:44"><struct-ref name="Point" ref="0x405683e0"/>
+                <typename><typedef-ref name="Point" ref="0x40568e18"/></typename>
+              </type-tag>
+            </type-pointer>
+            <type-pointer alignment="I:2" size="I:2">
+              <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+                <typename><typedef-ref name="NN_DIGIT" ref="0x4056c6e0"/></typename>
+              </type-int>
+            </type-pointer>
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:44"><struct-ref name="Point" ref="0x405683e0"/>
+                <typename><typedef-ref name="Point" ref="0x40568e18"/></typename>
+              </type-tag>
+            </type-pointer>
+            <type-pointer alignment="I:2" size="I:2">
+              <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+                <typename><typedef-ref name="NN_DIGIT" ref="0x4056c6e0"/></typename>
+              </type-int>
+            </type-pointer>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="72:ECC.nc" name="P0" ref="0x406a0010">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:44"><struct-ref name="Point" ref="0x405683e0"/>
+                <typename><typedef-ref name="Point" ref="0x40568e18"/></typename>
+              </type-tag>
+            </type-pointer>
+          </variable>
+          <variable loc="72:ECC.nc" name="Z0" ref="0x406a0218">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+                <typename><typedef-ref name="NN_DIGIT" ref="0x4056c6e0"/></typename>
+              </type-int>
+            </type-pointer>
+          </variable>
+          <variable loc="72:ECC.nc" name="P1" ref="0x406a0400">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:44"><struct-ref name="Point" ref="0x405683e0"/>
+                <typename><typedef-ref name="Point" ref="0x40568e18"/></typename>
+              </type-tag>
+            </type-pointer>
+          </variable>
+          <variable loc="72:ECC.nc" name="Z1" ref="0x406a0608">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+                <typename><typedef-ref name="NN_DIGIT" ref="0x4056c6e0"/></typename>
+              </type-int>
+            </type-pointer>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="88:ECC.nc" name="win_mul_base" provided="0" ref="0x4069d9d8">
+        <interfacedef-ref nicename="ECC" qname="ECC"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:44"><struct-ref name="Point" ref="0x405683e0"/>
+                <typename><typedef-ref name="Point" ref="0x40568e18"/></typename>
+              </type-tag>
+            </type-pointer>
+            <type-pointer alignment="I:2" size="I:2">
+              <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+                <typename><typedef-ref name="NN_DIGIT" ref="0x4056c6e0"/></typename>
+              </type-int>
+            </type-pointer>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="88:ECC.nc" name="P0" ref="0x4069d678">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:44"><struct-ref name="Point" ref="0x405683e0"/>
+                <typename><typedef-ref name="Point" ref="0x40568e18"/></typename>
+              </type-tag>
+            </type-pointer>
+          </variable>
+          <variable loc="88:ECC.nc" name="n" ref="0x4069d878">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+                <typename><typedef-ref name="NN_DIGIT" ref="0x4056c6e0"/></typename>
+              </type-int>
+            </type-pointer>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="49:ECC.nc" name="check_point" provided="0" ref="0x406a48f8">
+        <interfacedef-ref nicename="ECC" qname="ECC"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:2" cname="int" size="I:2"/>
+          <function-parameters>
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:44"><struct-ref name="Point" ref="0x405683e0"/>
+                <typename><typedef-ref name="Point" ref="0x40568e18"/></typename>
+              </type-tag>
+            </type-pointer>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="49:ECC.nc" name="P" ref="0x406a47a0">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:44"><struct-ref name="Point" ref="0x405683e0"/>
+                <typename><typedef-ref name="Point" ref="0x40568e18"/></typename>
+              </type-tag>
+            </type-pointer>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="92:ECC.nc" name="win_precompute_Z" provided="0" ref="0x4069c410">
+        <interfacedef-ref nicename="ECC" qname="ECC"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:44"><struct-ref name="Point" ref="0x405683e0"/>
+                <typename><typedef-ref name="Point" ref="0x40568e18"/></typename>
+              </type-tag>
+            </type-pointer>
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:44"><struct-ref name="Point" ref="0x405683e0"/>
+                <typename><typedef-ref name="Point" ref="0x40568e18"/></typename>
+              </type-tag>
+            </type-pointer>
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:22"><struct-ref name="ZCoordinate" ref="0x40567010"/>
+                <typename><typedef-ref name="ZCoordinate" ref="0x405676d8"/></typename>
+              </type-tag>
+            </type-pointer>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="92:ECC.nc" name="baseP" ref="0x4069de20">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:44"><struct-ref name="Point" ref="0x405683e0"/>
+                <typename><typedef-ref name="Point" ref="0x40568e18"/></typename>
+              </type-tag>
+            </type-pointer>
+          </variable>
+          <variable loc="92:ECC.nc" name="pointArray" ref="0x4069c068">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:44"><struct-ref name="Point" ref="0x405683e0"/>
+                <typename><typedef-ref name="Point" ref="0x40568e18"/></typename>
+              </type-tag>
+            </type-pointer>
+          </variable>
+          <variable loc="92:ECC.nc" name="ZList" ref="0x4069c2a8">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:22"><struct-ref name="ZCoordinate" ref="0x40567010"/>
+                <typename><typedef-ref name="ZCoordinate" ref="0x405676d8"/></typename>
+              </type-tag>
+            </type-pointer>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="58:ECC.nc" name="add" provided="0" ref="0x406a2b70">
+        <interfacedef-ref nicename="ECC" qname="ECC"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:44"><struct-ref name="Point" ref="0x405683e0"/>
+                <typename><typedef-ref name="Point" ref="0x40568e18"/></typename>
+              </type-tag>
+            </type-pointer>
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:44"><struct-ref name="Point" ref="0x405683e0"/>
+                <typename><typedef-ref name="Point" ref="0x40568e18"/></typename>
+              </type-tag>
+            </type-pointer>
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:44"><struct-ref name="Point" ref="0x405683e0"/>
+                <typename><typedef-ref name="Point" ref="0x40568e18"/></typename>
+              </type-tag>
+            </type-pointer>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="58:ECC.nc" name="P0" ref="0x406a2638">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:44"><struct-ref name="Point" ref="0x405683e0"/>
+                <typename><typedef-ref name="Point" ref="0x40568e18"/></typename>
+              </type-tag>
+            </type-pointer>
+          </variable>
+          <variable loc="58:ECC.nc" name="P1" ref="0x406a2820">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:44"><struct-ref name="Point" ref="0x405683e0"/>
+                <typename><typedef-ref name="Point" ref="0x40568e18"/></typename>
+              </type-tag>
+            </type-pointer>
+          </variable>
+          <variable loc="58:ECC.nc" name="P2" ref="0x406a2a08">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:44"><struct-ref name="Point" ref="0x405683e0"/>
+                <typename><typedef-ref name="Point" ref="0x40568e18"/></typename>
+              </type-tag>
+            </type-pointer>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="42:ECC.nc" name="gen_public_key" provided="0" ref="0x40690ec8">
+        <interfacedef-ref nicename="ECC" qname="ECC"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:44"><struct-ref name="Point" ref="0x405683e0"/>
+                <typename><typedef-ref name="Point" ref="0x40568e18"/></typename>
+              </type-tag>
+            </type-pointer>
+            <type-pointer alignment="I:2" size="I:2">
+              <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+                <typename><typedef-ref name="NN_DIGIT" ref="0x4056c6e0"/></typename>
+              </type-int>
+            </type-pointer>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="42:ECC.nc" name="PublicKey" ref="0x40690b10">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:44"><struct-ref name="Point" ref="0x405683e0"/>
+                <typename><typedef-ref name="Point" ref="0x40568e18"/></typename>
+              </type-tag>
+            </type-pointer>
+          </variable>
+          <variable loc="42:ECC.nc" name="PrivateKey" ref="0x40690d68">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+                <typename><typedef-ref name="NN_DIGIT" ref="0x4056c6e0"/></typename>
+              </type-int>
+            </type-pointer>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="80:ECC.nc" name="win_precompute" provided="0" ref="0x4069e860">
+        <interfacedef-ref nicename="ECC" qname="ECC"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:44"><struct-ref name="Point" ref="0x405683e0"/>
+                <typename><typedef-ref name="Point" ref="0x40568e18"/></typename>
+              </type-tag>
+            </type-pointer>
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:44"><struct-ref name="Point" ref="0x405683e0"/>
+                <typename><typedef-ref name="Point" ref="0x40568e18"/></typename>
+              </type-tag>
+            </type-pointer>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="80:ECC.nc" name="baseP" ref="0x4069e4c8">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:44"><struct-ref name="Point" ref="0x405683e0"/>
+                <typename><typedef-ref name="Point" ref="0x40568e18"/></typename>
+              </type-tag>
+            </type-pointer>
+          </variable>
+          <variable loc="80:ECC.nc" name="pointArray" ref="0x4069e700">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:44"><struct-ref name="Point" ref="0x405683e0"/>
+                <typename><typedef-ref name="Point" ref="0x40568e18"/></typename>
+              </type-tag>
+            </type-pointer>
+          </variable>
+        </parameters>
+      </function>
+    </interfacedef>

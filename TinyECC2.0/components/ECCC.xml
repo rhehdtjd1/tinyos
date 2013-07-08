@@ -1,0 +1,334 @@
+<?xml version="1.0" ?>
+<component loc="37:ECCC.nc" nicename="ECCC" qname="ECCC">
+      <documentation loc="26:ECCC.nc">
+        <short>
+ ECCC.nc
+ Configuration of Ecc
+
+ Author: An Liu
+ Date: 09/29/2006
+</short>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="47:ECCC.nc">
+          <from><interface-ref name="ECC" ref="0x40858580" scoped=""/></from>
+          <to><interface-ref name="ECC" ref="0x40980d50" scoped=""/></to>
+        </wire>
+        <wire loc="48:ECCC.nc">
+          <from><interface-ref name="NN" ref="0x4099d040" scoped=""/></from>
+          <to><interface-ref name="NN" ref="0x408597e0" scoped=""/></to>
+        </wire>
+        <wire loc="49:ECCC.nc">
+          <from><interface-ref name="Random" ref="0x4099bb70" scoped=""/></from>
+          <to><interface-ref name="Random" ref="0x4072a8b8" scoped=""/></to>
+        </wire>
+        <wire loc="77:ECCC.nc">
+          <from><interface-ref name="CurveParam" ref="0x4099b718" scoped=""/></from>
+          <to><interface-ref name="CurveParam" ref="0x40aa6bd0" scoped=""/></to>
+        </wire>
+        <wire loc="78:ECCC.nc">
+          <from><interface-ref name="CurveParam" ref="0x40865340" scoped=""/></from>
+          <to><interface-ref name="CurveParam" ref="0x40aa6bd0" scoped=""/></to>
+        </wire>
+        <wire loc="79:ECCC.nc">
+          <from><interface-ref name="NN" ref="0x40abe040" scoped=""/></from>
+          <to><interface-ref name="NN" ref="0x408597e0" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification><interface loc="38:ECCC.nc" name="ECC" provided="1" ref="0x40858580">
+      <component-ref nicename="ECCC" qname="ECCC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ECC" ref="0x40858580" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="ECC" qname="ECC"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="get_param" ref="0x40858758" scoped=""/>
+        <function-ref name="point2octet" ref="0x40858838" scoped=""/>
+        <function-ref name="win_mul" ref="0x40858918" scoped=""/>
+        <function-ref name="gen_private_key" ref="0x408589f8" scoped=""/>
+        <function-ref name="win_mul_Z" ref="0x40858ad8" scoped=""/>
+        <function-ref name="octet2point" ref="0x40858bb8" scoped=""/>
+        <function-ref name="init" ref="0x40858c98" scoped=""/>
+        <function-ref name="add_proj" ref="0x40858d78" scoped=""/>
+        <function-ref name="BarrettSetBuf" ref="0x40858e58" scoped=""/>
+        <function-ref name="point_is_zero" ref="0x40980010" scoped=""/>
+        <function-ref name="mul" ref="0x409800f0" scoped=""/>
+        <function-ref name="dbl_proj" ref="0x409801d0" scoped=""/>
+        <function-ref name="win_mul_base" ref="0x409802b0" scoped=""/>
+        <function-ref name="check_point" ref="0x40980410" scoped=""/>
+        <function-ref name="win_precompute_Z" ref="0x409804f0" scoped=""/>
+        <function-ref name="add" ref="0x409805d0" scoped=""/>
+        <function-ref name="gen_public_key" ref="0x409806b0" scoped=""/>
+        <function-ref name="win_precompute" ref="0x40980790" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="35:ECCM.nc" name="NN" provided="0" ref="0x4099d040">
+      <component-ref nicename="ECCM" qname="ECCM"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="NN" ref="0x4099d040" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="NN" qname="NN"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="ModSqr" ref="0x4099d218" scoped=""/>
+        <function-ref name="LShift" ref="0x4099d2f8" scoped=""/>
+        <function-ref name="ModSmall" ref="0x4099d3d8" scoped=""/>
+        <function-ref name="Gcd" ref="0x4099d4b8" scoped=""/>
+        <function-ref name="ModExp" ref="0x4099d598" scoped=""/>
+        <function-ref name="ModNeg" ref="0x4099d678" scoped=""/>
+        <function-ref name="AddDigitMult" ref="0x4099d758" scoped=""/>
+        <function-ref name="ModBarrett" ref="0x4099d838" scoped=""/>
+        <function-ref name="Digits" ref="0x4099d918" scoped=""/>
+        <function-ref name="ModSub" ref="0x4099d9f8" scoped=""/>
+        <function-ref name="ModDiv" ref="0x4099dad8" scoped=""/>
+        <function-ref name="Cmp" ref="0x4099dbb8" scoped=""/>
+        <function-ref name="ModBarrettInit" ref="0x4099dc98" scoped=""/>
+        <function-ref name="AssignDigit" ref="0x4099ddf8" scoped=""/>
+        <function-ref name="BarrettSetBuf" ref="0x4099ded8" scoped=""/>
+        <function-ref name="ModMult" ref="0x4099c010" scoped=""/>
+        <function-ref name="Sub" ref="0x4099c0f0" scoped=""/>
+        <function-ref name="Mult" ref="0x4099c1d0" scoped=""/>
+        <function-ref name="ModMultOpt" ref="0x4099c2b0" scoped=""/>
+        <function-ref name="Assign" ref="0x4099c390" scoped=""/>
+        <function-ref name="Decode" ref="0x4099c470" scoped=""/>
+        <function-ref name="Encode" ref="0x4099c550" scoped=""/>
+        <function-ref name="Assign2Exp" ref="0x4099c630" scoped=""/>
+        <function-ref name="Mod" ref="0x4099c710" scoped=""/>
+        <function-ref name="ModSqrRootOpt" ref="0x4099c7f0" scoped=""/>
+        <function-ref name="Div" ref="0x4099c9d0" scoped=""/>
+        <function-ref name="Add" ref="0x4099cab0" scoped=""/>
+        <function-ref name="ModAdd" ref="0x4099cb90" scoped=""/>
+        <function-ref name="One" ref="0x4099cc70" scoped=""/>
+        <function-ref name="Bits" ref="0x4099cd50" scoped=""/>
+        <function-ref name="TestBit" ref="0x4099ce30" scoped=""/>
+        <function-ref name="Equal" ref="0x4099cf10" scoped=""/>
+        <function-ref name="ModSqrOpt" ref="0x4099b010" scoped=""/>
+        <function-ref name="AssignZero" ref="0x4099b0f0" scoped=""/>
+        <function-ref name="RShift" ref="0x4099b1d0" scoped=""/>
+        <function-ref name="ModDivOpt" ref="0x4099b2b0" scoped=""/>
+        <function-ref name="ModInv" ref="0x4099b390" scoped=""/>
+        <function-ref name="Even" ref="0x4099b470" scoped=""/>
+        <function-ref name="Zero" ref="0x4099b550" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="35:secp160r1.nc" name="CurveParam" provided="1" ref="0x40aa6bd0">
+      <component-ref nicename="secp160r1" qname="secp160r1"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="CurveParam" ref="0x40aa6bd0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="CurveParam" qname="CurveParam"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="get_param" ref="0x40aa6da8" scoped=""/>
+        <function-ref name="omega_mul" ref="0x40aa6e88" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="46:/opt/tinyos-2.0.2/tos/system/RandomLfsrC.nc" name="Random" provided="1" ref="0x4072a8b8">
+      <component-ref nicename="tos.system.RandomLfsrC" qname="RandomLfsrC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Random" ref="0x4072a8b8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Random" qname="Random"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="rand16" ref="0x4072aa90" scoped=""/>
+        <function-ref name="rand32" ref="0x4072ab70" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="45:NNM.nc" name="NN" provided="1" ref="0x408597e0">
+      <component-ref nicename="NNM" qname="NNM"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="NN" ref="0x408597e0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="NN" qname="NN"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="ModSqr" ref="0x408599b8" scoped=""/>
+        <function-ref name="LShift" ref="0x40859a98" scoped=""/>
+        <function-ref name="ModSmall" ref="0x40859b78" scoped=""/>
+        <function-ref name="Gcd" ref="0x40859c58" scoped=""/>
+        <function-ref name="ModExp" ref="0x40859d38" scoped=""/>
+        <function-ref name="ModNeg" ref="0x40859e18" scoped=""/>
+        <function-ref name="AddDigitMult" ref="0x40859ef8" scoped=""/>
+        <function-ref name="ModBarrett" ref="0x40855010" scoped=""/>
+        <function-ref name="Digits" ref="0x408550f0" scoped=""/>
+        <function-ref name="ModSub" ref="0x408551d0" scoped=""/>
+        <function-ref name="ModDiv" ref="0x408552b0" scoped=""/>
+        <function-ref name="Cmp" ref="0x40855390" scoped=""/>
+        <function-ref name="ModBarrettInit" ref="0x40855470" scoped=""/>
+        <function-ref name="AssignDigit" ref="0x408555d0" scoped=""/>
+        <function-ref name="BarrettSetBuf" ref="0x408556b0" scoped=""/>
+        <function-ref name="ModMult" ref="0x40855790" scoped=""/>
+        <function-ref name="Sub" ref="0x40855870" scoped=""/>
+        <function-ref name="Mult" ref="0x40855950" scoped=""/>
+        <function-ref name="ModMultOpt" ref="0x40855a30" scoped=""/>
+        <function-ref name="Assign" ref="0x40855b10" scoped=""/>
+        <function-ref name="Decode" ref="0x40855bf0" scoped=""/>
+        <function-ref name="Encode" ref="0x40855cd0" scoped=""/>
+        <function-ref name="Assign2Exp" ref="0x40855db0" scoped=""/>
+        <function-ref name="Mod" ref="0x40855e90" scoped=""/>
+        <function-ref name="ModSqrRootOpt" ref="0x40869010" scoped=""/>
+        <function-ref name="Div" ref="0x408691f0" scoped=""/>
+        <function-ref name="Add" ref="0x408692d0" scoped=""/>
+        <function-ref name="ModAdd" ref="0x408693b0" scoped=""/>
+        <function-ref name="One" ref="0x40869490" scoped=""/>
+        <function-ref name="Bits" ref="0x40869570" scoped=""/>
+        <function-ref name="TestBit" ref="0x40869650" scoped=""/>
+        <function-ref name="Equal" ref="0x40869730" scoped=""/>
+        <function-ref name="ModSqrOpt" ref="0x40869810" scoped=""/>
+        <function-ref name="AssignZero" ref="0x408698f0" scoped=""/>
+        <function-ref name="RShift" ref="0x408699d0" scoped=""/>
+        <function-ref name="ModDivOpt" ref="0x40869ab0" scoped=""/>
+        <function-ref name="ModInv" ref="0x40869b90" scoped=""/>
+        <function-ref name="Even" ref="0x40869c70" scoped=""/>
+        <function-ref name="Zero" ref="0x40869d50" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="37:ECCM.nc" name="Random" provided="0" ref="0x4099bb70">
+      <component-ref nicename="ECCM" qname="ECCM"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Random" ref="0x4099bb70" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Random" qname="Random"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="rand16" ref="0x4099bd48" scoped=""/>
+        <function-ref name="rand32" ref="0x4099be28" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="46:NNM.nc" name="CurveParam" provided="0" ref="0x40865340">
+      <component-ref nicename="NNM" qname="NNM"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="CurveParam" ref="0x40865340" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="CurveParam" qname="CurveParam"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="get_param" ref="0x40865518" scoped=""/>
+        <function-ref name="omega_mul" ref="0x408655f8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="36:ECCM.nc" name="CurveParam" provided="0" ref="0x4099b718">
+      <component-ref nicename="ECCM" qname="ECCM"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="CurveParam" ref="0x4099b718" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="CurveParam" qname="CurveParam"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="get_param" ref="0x4099b8f0" scoped=""/>
+        <function-ref name="omega_mul" ref="0x4099b9d0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="36:secp160r1.nc" name="NN" provided="0" ref="0x40abe040">
+      <component-ref nicename="secp160r1" qname="secp160r1"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="NN" ref="0x40abe040" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="NN" qname="NN"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="ModSqr" ref="0x40abe218" scoped=""/>
+        <function-ref name="LShift" ref="0x40abe2f8" scoped=""/>
+        <function-ref name="ModSmall" ref="0x40abe3d8" scoped=""/>
+        <function-ref name="Gcd" ref="0x40abe4b8" scoped=""/>
+        <function-ref name="ModExp" ref="0x40abe598" scoped=""/>
+        <function-ref name="ModNeg" ref="0x40abe678" scoped=""/>
+        <function-ref name="AddDigitMult" ref="0x40abe758" scoped=""/>
+        <function-ref name="ModBarrett" ref="0x40abe838" scoped=""/>
+        <function-ref name="Digits" ref="0x40abe918" scoped=""/>
+        <function-ref name="ModSub" ref="0x40abe9f8" scoped=""/>
+        <function-ref name="ModDiv" ref="0x40abead8" scoped=""/>
+        <function-ref name="Cmp" ref="0x40abebb8" scoped=""/>
+        <function-ref name="ModBarrettInit" ref="0x40abec98" scoped=""/>
+        <function-ref name="AssignDigit" ref="0x40abedf8" scoped=""/>
+        <function-ref name="BarrettSetBuf" ref="0x40abeed8" scoped=""/>
+        <function-ref name="ModMult" ref="0x40abd010" scoped=""/>
+        <function-ref name="Sub" ref="0x40abd0f0" scoped=""/>
+        <function-ref name="Mult" ref="0x40abd1d0" scoped=""/>
+        <function-ref name="ModMultOpt" ref="0x40abd2b0" scoped=""/>
+        <function-ref name="Assign" ref="0x40abd390" scoped=""/>
+        <function-ref name="Decode" ref="0x40abd470" scoped=""/>
+        <function-ref name="Encode" ref="0x40abd550" scoped=""/>
+        <function-ref name="Assign2Exp" ref="0x40abd630" scoped=""/>
+        <function-ref name="Mod" ref="0x40abd710" scoped=""/>
+        <function-ref name="ModSqrRootOpt" ref="0x40abd7f0" scoped=""/>
+        <function-ref name="Div" ref="0x40abd9d0" scoped=""/>
+        <function-ref name="Add" ref="0x40abdab0" scoped=""/>
+        <function-ref name="ModAdd" ref="0x40abdb90" scoped=""/>
+        <function-ref name="One" ref="0x40abdc70" scoped=""/>
+        <function-ref name="Bits" ref="0x40abdd50" scoped=""/>
+        <function-ref name="TestBit" ref="0x40abde30" scoped=""/>
+        <function-ref name="Equal" ref="0x40abdf10" scoped=""/>
+        <function-ref name="ModSqrOpt" ref="0x40abc010" scoped=""/>
+        <function-ref name="AssignZero" ref="0x40abc0f0" scoped=""/>
+        <function-ref name="RShift" ref="0x40abc1d0" scoped=""/>
+        <function-ref name="ModDivOpt" ref="0x40abc2b0" scoped=""/>
+        <function-ref name="ModInv" ref="0x40abc390" scoped=""/>
+        <function-ref name="Even" ref="0x40abc470" scoped=""/>
+        <function-ref name="Zero" ref="0x40abc550" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="34:ECCM.nc" name="ECC" provided="1" ref="0x40980d50">
+      <component-ref nicename="ECCM" qname="ECCM"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ECC" ref="0x40980d50" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="ECC" qname="ECC"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="get_param" ref="0x40980f28" scoped=""/>
+        <function-ref name="point2octet" ref="0x4099e018" scoped=""/>
+        <function-ref name="win_mul" ref="0x4099e0f8" scoped=""/>
+        <function-ref name="gen_private_key" ref="0x4099e1d8" scoped=""/>
+        <function-ref name="win_mul_Z" ref="0x4099e2b8" scoped=""/>
+        <function-ref name="octet2point" ref="0x4099e398" scoped=""/>
+        <function-ref name="init" ref="0x4099e478" scoped=""/>
+        <function-ref name="add_proj" ref="0x4099e558" scoped=""/>
+        <function-ref name="BarrettSetBuf" ref="0x4099e638" scoped=""/>
+        <function-ref name="point_is_zero" ref="0x4099e718" scoped=""/>
+        <function-ref name="mul" ref="0x4099e7f8" scoped=""/>
+        <function-ref name="dbl_proj" ref="0x4099e8d8" scoped=""/>
+        <function-ref name="win_mul_base" ref="0x4099e9b8" scoped=""/>
+        <function-ref name="check_point" ref="0x4099eb18" scoped=""/>
+        <function-ref name="win_precompute_Z" ref="0x4099ebf8" scoped=""/>
+        <function-ref name="add" ref="0x4099ecd8" scoped=""/>
+        <function-ref name="gen_public_key" ref="0x4099edb8" scoped=""/>
+        <function-ref name="win_precompute" ref="0x4099ee98" scoped=""/>
+      </interface-functions>
+    </interface><component loc="43:/opt/tinyos-2.0.2/tos/system/RandomLfsrC.nc" nicename="tos.system.RandomLfsrC" qname="RandomLfsrC">
+      <documentation loc="32:/opt/tinyos-2.0.2/tos/system/RandomLfsrC.nc">
+        <short>
+ This is a 16 bit Linear Feedback Shift Register pseudo random number
+ generator.</short>
+        <long>
+ This is a 16 bit Linear Feedback Shift Register pseudo random number
+ generator. It is faster than the MLCG generator but does not generate
+ nearly as good random numbers.
+
+ @author Philip Levis
+ @author David Gay
+ @author Alec Woo
+ @date   Jan 20 2005
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="53:/opt/tinyos-2.0.2/tos/system/RandomLfsrC.nc">
+          <from><interface-ref name="Random" ref="0x4072a8b8" scoped=""/></from>
+          <to><interface-ref name="Random" ref="0x40857690" scoped=""/></to>
+        </wire>
+        <wire loc="52:/opt/tinyos-2.0.2/tos/system/RandomLfsrC.nc">
+          <from><interface-ref name="Init" ref="0x4072a540" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x40857318" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="44:NNM.nc" nicename="NNM" qname="NNM">
+      <documentation loc="27:NNM.nc">
+        <short>
+ module NNM, provide interface NN
+ modified from nn.h and nn.c from RSAREF 2.0
+</short>
+      </documentation>
+      <module/>
+    </component><component loc="33:ECCM.nc" nicename="ECCM" qname="ECCM">
+      <documentation loc="26:ECCM.nc">
+        <short>
+ ECCM, the module implement ECC.nc
+</short>
+      </documentation>
+      <module/>
+    </component><component loc="34:secp160r1.nc" nicename="secp160r1" qname="secp160r1">
+      <documentation loc="26:secp160r1.nc">
+        <short>
+ Module for curve secp160r1
+
+ Author: An Liu
+ Date: 09/15/2005
+</short>
+      </documentation>
+      <module/>
+    </component></referenced></component>

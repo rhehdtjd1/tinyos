@@ -1,0 +1,817 @@
+<?xml version="1.0" ?>
+<component loc="5:testECDSA.nc" nicename="testECDSA" qname="testECDSA">
+      <configuration/>
+      <wiring>
+        <wire loc="11:testECDSA.nc">
+          <from><interface-ref name="SoftwareInit" ref="0x4057c358" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x4072a540" scoped=""/></to>
+        </wire>
+        <wire loc="12:testECDSA.nc">
+          <from><interface-ref name="Boot" ref="0x40563530" scoped=""/></from>
+          <to><interface-ref name="Boot" ref="0x4056d670" scoped=""/></to>
+        </wire>
+        <wire loc="16:testECDSA.nc">
+          <from><interface-ref name="myTimer" ref="0x406ba8c8" scoped=""/></from>
+          <to><interface-ref name="Timer" ref="0x40bc2d80" scoped=""/></to>
+        </wire>
+        <wire loc="17:testECDSA.nc">
+          <from><interface-ref name="LocalTime" ref="0x406b68a0" scoped=""/></from>
+          <to><interface-ref name="LocalTime" ref="0x40cb7ac8" scoped=""/></to>
+        </wire>
+        <wire loc="18:testECDSA.nc">
+          <from><interface-ref name="Random" ref="0x406b8de0" scoped=""/></from>
+          <to><interface-ref name="Random" ref="0x4072a8b8" scoped=""/></to>
+        </wire>
+        <wire loc="19:testECDSA.nc">
+          <from><interface-ref name="Leds" ref="0x406c4298" scoped=""/></from>
+          <to><interface-ref name="Leds" ref="0x407291a0" scoped=""/></to>
+        </wire>
+        <wire loc="23:testECDSA.nc">
+          <from><interface-ref name="PubKeyMsg" ref="0x406ec398" scoped=""/></from>
+          <to><interface-ref name="AMSend" ref="0x40cb2550" scoped=""/>
+          <arguments>
+            <value cst="I:11">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="24:testECDSA.nc">
+          <from><interface-ref name="PriKeyMsg" ref="0x406ecaf0" scoped=""/></from>
+          <to><interface-ref name="AMSend" ref="0x40cb2550" scoped=""/>
+          <arguments>
+            <value cst="I:12">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="25:testECDSA.nc">
+          <from><interface-ref name="PacketMsg" ref="0x406c32f0" scoped=""/></from>
+          <to><interface-ref name="AMSend" ref="0x40cb2550" scoped=""/>
+          <arguments>
+            <value cst="I:14">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="26:testECDSA.nc">
+          <from><interface-ref name="TimeMsg" ref="0x406c3a30" scoped=""/></from>
+          <to><interface-ref name="AMSend" ref="0x40cb2550" scoped=""/>
+          <arguments>
+            <value cst="I:13">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="27:testECDSA.nc">
+          <from><interface-ref name="SerialControl" ref="0x406e7318" scoped=""/></from>
+          <to><interface-ref name="SplitControl" ref="0x40cb6c18" scoped=""/></to>
+        </wire>
+        <wire loc="29:testECDSA.nc">
+          <from><interface-ref name="NN" ref="0x406944d8" scoped=""/></from>
+          <to><interface-ref name="NN" ref="0x408597e0" scoped=""/></to>
+        </wire>
+        <wire loc="30:testECDSA.nc">
+          <from><interface-ref name="ECC" ref="0x4069a598" scoped=""/></from>
+          <to><interface-ref name="ECC" ref="0x40858580" scoped=""/></to>
+        </wire>
+        <wire loc="31:testECDSA.nc">
+          <from><interface-ref name="ECDSA" ref="0x406adc10" scoped=""/></from>
+          <to><interface-ref name="ECDSA" ref="0x40b4fdd8" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification/><referenced><interface loc="23:testECDSAM.nc" name="SerialControl" provided="0" ref="0x406e7318">
+      <component-ref nicename="testECDSAM" qname="testECDSAM"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SerialControl" ref="0x406e7318" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.SplitControl" qname="SplitControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="startDone" ref="0x406e7570" scoped=""/>
+        <function-ref name="stopDone" ref="0x406e7650" scoped=""/>
+        <function-ref name="start" ref="0x406e7730" scoped=""/>
+        <function-ref name="stop" ref="0x406e7810" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="47:/opt/tinyos-2.0.2/tos/system/MainC.nc" name="SoftwareInit" provided="0" ref="0x4057c358">
+      <component-ref nicename="tos.system.MainC" qname="MainC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SoftwareInit" ref="0x4057c358" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x4057c530" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="45:NNM.nc" name="NN" provided="1" ref="0x408597e0">
+      <component-ref nicename="NNM" qname="NNM"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="NN" ref="0x408597e0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="NN" qname="NN"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="ModSqr" ref="0x408599b8" scoped=""/>
+        <function-ref name="LShift" ref="0x40859a98" scoped=""/>
+        <function-ref name="ModSmall" ref="0x40859b78" scoped=""/>
+        <function-ref name="Gcd" ref="0x40859c58" scoped=""/>
+        <function-ref name="ModExp" ref="0x40859d38" scoped=""/>
+        <function-ref name="ModNeg" ref="0x40859e18" scoped=""/>
+        <function-ref name="AddDigitMult" ref="0x40859ef8" scoped=""/>
+        <function-ref name="ModBarrett" ref="0x40855010" scoped=""/>
+        <function-ref name="Digits" ref="0x408550f0" scoped=""/>
+        <function-ref name="ModSub" ref="0x408551d0" scoped=""/>
+        <function-ref name="ModDiv" ref="0x408552b0" scoped=""/>
+        <function-ref name="Cmp" ref="0x40855390" scoped=""/>
+        <function-ref name="ModBarrettInit" ref="0x40855470" scoped=""/>
+        <function-ref name="AssignDigit" ref="0x408555d0" scoped=""/>
+        <function-ref name="BarrettSetBuf" ref="0x408556b0" scoped=""/>
+        <function-ref name="ModMult" ref="0x40855790" scoped=""/>
+        <function-ref name="Sub" ref="0x40855870" scoped=""/>
+        <function-ref name="Mult" ref="0x40855950" scoped=""/>
+        <function-ref name="ModMultOpt" ref="0x40855a30" scoped=""/>
+        <function-ref name="Assign" ref="0x40855b10" scoped=""/>
+        <function-ref name="Decode" ref="0x40855bf0" scoped=""/>
+        <function-ref name="Encode" ref="0x40855cd0" scoped=""/>
+        <function-ref name="Assign2Exp" ref="0x40855db0" scoped=""/>
+        <function-ref name="Mod" ref="0x40855e90" scoped=""/>
+        <function-ref name="ModSqrRootOpt" ref="0x40869010" scoped=""/>
+        <function-ref name="Div" ref="0x408691f0" scoped=""/>
+        <function-ref name="Add" ref="0x408692d0" scoped=""/>
+        <function-ref name="ModAdd" ref="0x408693b0" scoped=""/>
+        <function-ref name="One" ref="0x40869490" scoped=""/>
+        <function-ref name="Bits" ref="0x40869570" scoped=""/>
+        <function-ref name="TestBit" ref="0x40869650" scoped=""/>
+        <function-ref name="Equal" ref="0x40869730" scoped=""/>
+        <function-ref name="ModSqrOpt" ref="0x40869810" scoped=""/>
+        <function-ref name="AssignZero" ref="0x408698f0" scoped=""/>
+        <function-ref name="RShift" ref="0x408699d0" scoped=""/>
+        <function-ref name="ModDivOpt" ref="0x40869ab0" scoped=""/>
+        <function-ref name="ModInv" ref="0x40869b90" scoped=""/>
+        <function-ref name="Even" ref="0x40869c70" scoped=""/>
+        <function-ref name="Zero" ref="0x40869d50" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="36:/opt/tinyos-2.0.2/tos/lib/serial/SerialActiveMessageC.nc" name="AMSend" provided="1" ref="0x40cb2550">
+      <component-ref nicename="tos.lib.serial.SerialActiveMessageC" qname="SerialActiveMessageC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="AMSend" ref="0x40cb2550" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AMSend" qname="AMSend"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="am_id_t" ref="0x406e3648"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="send" ref="0x40cb2728" scoped=""/>
+        <function-ref name="getPayload" ref="0x40cb2808" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x40cb28e8" scoped=""/>
+        <function-ref name="cancel" ref="0x40cb29c8" scoped=""/>
+        <function-ref name="sendDone" ref="0x40cb2aa8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="19:testECDSAM.nc" name="PubKeyMsg" provided="0" ref="0x406ec398">
+      <component-ref nicename="testECDSAM" qname="testECDSAM"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="PubKeyMsg" ref="0x406ec398" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AMSend" qname="AMSend"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="send" ref="0x406ec570" scoped=""/>
+        <function-ref name="getPayload" ref="0x406ec650" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x406ec730" scoped=""/>
+        <function-ref name="cancel" ref="0x406ec810" scoped=""/>
+        <function-ref name="sendDone" ref="0x406ec8f0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="35:/opt/tinyos-2.0.2/tos/lib/serial/SerialActiveMessageC.nc" name="SplitControl" provided="1" ref="0x40cb6c18">
+      <component-ref nicename="tos.lib.serial.SerialActiveMessageC" qname="SerialActiveMessageC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SplitControl" ref="0x40cb6c18" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.SplitControl" qname="SplitControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="startDone" ref="0x40cb6df0" scoped=""/>
+        <function-ref name="stopDone" ref="0x40cb6ed0" scoped=""/>
+        <function-ref name="start" ref="0x40cb2010" scoped=""/>
+        <function-ref name="stop" ref="0x40cb20f0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="46:/opt/tinyos-2.0.2/tos/system/MainC.nc" name="Boot" provided="1" ref="0x4056d670">
+      <component-ref nicename="tos.system.MainC" qname="MainC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Boot" ref="0x4056d670" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Boot" qname="Boot"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="booted" ref="0x4056d848" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="14:testECDSAM.nc" name="ECDSA" provided="0" ref="0x406adc10">
+      <component-ref nicename="testECDSAM" qname="testECDSAM"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ECDSA" ref="0x406adc10" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="ECDSA" qname="ECDSA"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="sign" ref="0x406adde8" scoped=""/>
+        <function-ref name="init" ref="0x406adec8" scoped=""/>
+        <function-ref name="verify" ref="0x40691010" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="11:testECDSAM.nc" name="Boot" provided="0" ref="0x40563530">
+      <component-ref nicename="testECDSAM" qname="testECDSAM"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Boot" ref="0x40563530" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Boot" qname="Boot"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="booted" ref="0x40563708" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="22:testECDSAM.nc" name="TimeMsg" provided="0" ref="0x406c3a30">
+      <component-ref nicename="testECDSAM" qname="testECDSAM"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="TimeMsg" ref="0x406c3a30" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AMSend" qname="AMSend"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="send" ref="0x406c3c08" scoped=""/>
+        <function-ref name="getPayload" ref="0x406c3ce8" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x406c3dc8" scoped=""/>
+        <function-ref name="cancel" ref="0x406c3ea8" scoped=""/>
+        <function-ref name="sendDone" ref="0x406eb010" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="18:testECDSAM.nc" name="Leds" provided="0" ref="0x406c4298">
+      <component-ref nicename="testECDSAM" qname="testECDSAM"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Leds" ref="0x406c4298" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Leds" qname="Leds"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="led0Off" ref="0x406c4470" scoped=""/>
+        <function-ref name="led0Toggle" ref="0x406c4550" scoped=""/>
+        <function-ref name="led1On" ref="0x406c4630" scoped=""/>
+        <function-ref name="led1Toggle" ref="0x406c4710" scoped=""/>
+        <function-ref name="led2Toggle" ref="0x406c47f0" scoped=""/>
+        <function-ref name="get" ref="0x406c48d0" scoped=""/>
+        <function-ref name="led1Off" ref="0x406c49b0" scoped=""/>
+        <function-ref name="led2Off" ref="0x406c4d30" scoped=""/>
+        <function-ref name="set" ref="0x406c4a90" scoped=""/>
+        <function-ref name="led0On" ref="0x406c4b70" scoped=""/>
+        <function-ref name="led2On" ref="0x406c4c50" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="16:testECDSAM.nc" name="LocalTime" provided="0" ref="0x406b68a0">
+      <component-ref nicename="testECDSAM" qname="testECDSAM"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="LocalTime" ref="0x406b68a0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.LocalTime" qname="LocalTime"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x406914b8"/>
+            <typename><typedef-ref name="TMilli" ref="0x40691680"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="get" ref="0x406b6ee8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="35:/opt/tinyos-2.0.2/tos/system/LedsC.nc" name="Leds" provided="1" ref="0x407291a0">
+      <component-ref nicename="tos.system.LedsC" qname="LedsC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Leds" ref="0x407291a0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Leds" qname="Leds"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="led0Off" ref="0x40729378" scoped=""/>
+        <function-ref name="led0Toggle" ref="0x40729458" scoped=""/>
+        <function-ref name="led1On" ref="0x40729538" scoped=""/>
+        <function-ref name="led1Toggle" ref="0x40729618" scoped=""/>
+        <function-ref name="led2Toggle" ref="0x407296f8" scoped=""/>
+        <function-ref name="get" ref="0x407297d8" scoped=""/>
+        <function-ref name="led1Off" ref="0x407298b8" scoped=""/>
+        <function-ref name="led2Off" ref="0x40729c38" scoped=""/>
+        <function-ref name="set" ref="0x40729998" scoped=""/>
+        <function-ref name="led0On" ref="0x40729a78" scoped=""/>
+        <function-ref name="led2On" ref="0x40729b58" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="21:testECDSAM.nc" name="PacketMsg" provided="0" ref="0x406c32f0">
+      <component-ref nicename="testECDSAM" qname="testECDSAM"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="PacketMsg" ref="0x406c32f0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AMSend" qname="AMSend"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="send" ref="0x406c34c8" scoped=""/>
+        <function-ref name="getPayload" ref="0x406c35a8" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x406c3688" scoped=""/>
+        <function-ref name="cancel" ref="0x406c3768" scoped=""/>
+        <function-ref name="sendDone" ref="0x406c3848" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="12:testECDSAM.nc" name="NN" provided="0" ref="0x406944d8">
+      <component-ref nicename="testECDSAM" qname="testECDSAM"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="NN" ref="0x406944d8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="NN" qname="NN"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="ModSqr" ref="0x406946b0" scoped=""/>
+        <function-ref name="LShift" ref="0x40694790" scoped=""/>
+        <function-ref name="ModSmall" ref="0x40694870" scoped=""/>
+        <function-ref name="Gcd" ref="0x40694950" scoped=""/>
+        <function-ref name="ModExp" ref="0x40694a30" scoped=""/>
+        <function-ref name="ModNeg" ref="0x40694b10" scoped=""/>
+        <function-ref name="AddDigitMult" ref="0x40694bf0" scoped=""/>
+        <function-ref name="ModBarrett" ref="0x40694cd0" scoped=""/>
+        <function-ref name="Digits" ref="0x40694db0" scoped=""/>
+        <function-ref name="ModSub" ref="0x40694e90" scoped=""/>
+        <function-ref name="ModDiv" ref="0x40669010" scoped=""/>
+        <function-ref name="Cmp" ref="0x406690f0" scoped=""/>
+        <function-ref name="ModBarrettInit" ref="0x406691d0" scoped=""/>
+        <function-ref name="AssignDigit" ref="0x40669330" scoped=""/>
+        <function-ref name="BarrettSetBuf" ref="0x40669410" scoped=""/>
+        <function-ref name="ModMult" ref="0x406694f0" scoped=""/>
+        <function-ref name="Sub" ref="0x406695d0" scoped=""/>
+        <function-ref name="Mult" ref="0x406696b0" scoped=""/>
+        <function-ref name="ModMultOpt" ref="0x40669790" scoped=""/>
+        <function-ref name="Assign" ref="0x40669870" scoped=""/>
+        <function-ref name="Decode" ref="0x40669950" scoped=""/>
+        <function-ref name="Encode" ref="0x40669a30" scoped=""/>
+        <function-ref name="Assign2Exp" ref="0x40669b10" scoped=""/>
+        <function-ref name="Mod" ref="0x40669bf0" scoped=""/>
+        <function-ref name="ModSqrRootOpt" ref="0x40669cd0" scoped=""/>
+        <function-ref name="Div" ref="0x40669eb0" scoped=""/>
+        <function-ref name="Add" ref="0x40668010" scoped=""/>
+        <function-ref name="ModAdd" ref="0x406680f0" scoped=""/>
+        <function-ref name="One" ref="0x406681d0" scoped=""/>
+        <function-ref name="Bits" ref="0x406682b0" scoped=""/>
+        <function-ref name="TestBit" ref="0x40668390" scoped=""/>
+        <function-ref name="Equal" ref="0x40668470" scoped=""/>
+        <function-ref name="ModSqrOpt" ref="0x40668550" scoped=""/>
+        <function-ref name="AssignZero" ref="0x40668630" scoped=""/>
+        <function-ref name="RShift" ref="0x40668710" scoped=""/>
+        <function-ref name="ModDivOpt" ref="0x406687f0" scoped=""/>
+        <function-ref name="ModInv" ref="0x406688d0" scoped=""/>
+        <function-ref name="Even" ref="0x406689b0" scoped=""/>
+        <function-ref name="Zero" ref="0x40668a90" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="45:/opt/tinyos-2.0.2/tos/system/RandomLfsrC.nc" name="Init" provided="1" ref="0x4072a540">
+      <component-ref nicename="tos.system.RandomLfsrC" qname="RandomLfsrC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Init" ref="0x4072a540" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x4072a718" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="34:ECDSAC.nc" name="ECDSA" provided="1" ref="0x40b4fdd8">
+      <component-ref nicename="ECDSAC" qname="ECDSAC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ECDSA" ref="0x40b4fdd8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="ECDSA" qname="ECDSA"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="sign" ref="0x40b4c010" scoped=""/>
+        <function-ref name="init" ref="0x40b4c0f0" scoped=""/>
+        <function-ref name="verify" ref="0x40b4c1d0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="15:testECDSAM.nc" name="myTimer" provided="0" ref="0x406ba8c8">
+      <component-ref nicename="testECDSAM" qname="testECDSAM"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="myTimer" ref="0x406ba8c8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Timer" qname="Timer"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x406914b8"/>
+            <typename><typedef-ref name="TMilli" ref="0x40691680"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x406b93d8" scoped=""/>
+        <function-ref name="fired" ref="0x406af678" scoped=""/>
+        <function-ref name="startPeriodicAt" ref="0x406afd80" scoped=""/>
+        <function-ref name="isOneShot" ref="0x406afb28" scoped=""/>
+        <function-ref name="getdt" ref="0x406b9888" scoped=""/>
+        <function-ref name="gett0" ref="0x406b9630" scoped=""/>
+        <function-ref name="isRunning" ref="0x406af8d0" scoped=""/>
+        <function-ref name="startPeriodic" ref="0x406baef0" scoped=""/>
+        <function-ref name="startOneShotAt" ref="0x406b90b8" scoped=""/>
+        <function-ref name="startOneShot" ref="0x406af1a0" scoped=""/>
+        <function-ref name="stop" ref="0x406af420" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="20:testECDSAM.nc" name="PriKeyMsg" provided="0" ref="0x406ecaf0">
+      <component-ref nicename="testECDSAM" qname="testECDSAM"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="PriKeyMsg" ref="0x406ecaf0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AMSend" qname="AMSend"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="send" ref="0x406eccc8" scoped=""/>
+        <function-ref name="getPayload" ref="0x406ecda8" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x406ece88" scoped=""/>
+        <function-ref name="cancel" ref="0x406c3010" scoped=""/>
+        <function-ref name="sendDone" ref="0x406c30f0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="13:testECDSAM.nc" name="ECC" provided="0" ref="0x4069a598">
+      <component-ref nicename="testECDSAM" qname="testECDSAM"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ECC" ref="0x4069a598" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="ECC" qname="ECC"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="get_param" ref="0x4069a770" scoped=""/>
+        <function-ref name="point2octet" ref="0x4069a850" scoped=""/>
+        <function-ref name="win_mul" ref="0x4069a930" scoped=""/>
+        <function-ref name="gen_private_key" ref="0x4069aa10" scoped=""/>
+        <function-ref name="win_mul_Z" ref="0x4069aaf0" scoped=""/>
+        <function-ref name="octet2point" ref="0x4069abd0" scoped=""/>
+        <function-ref name="init" ref="0x4069acb0" scoped=""/>
+        <function-ref name="add_proj" ref="0x4069ad90" scoped=""/>
+        <function-ref name="BarrettSetBuf" ref="0x4069ae70" scoped=""/>
+        <function-ref name="point_is_zero" ref="0x40692010" scoped=""/>
+        <function-ref name="mul" ref="0x406920f0" scoped=""/>
+        <function-ref name="dbl_proj" ref="0x406921d0" scoped=""/>
+        <function-ref name="win_mul_base" ref="0x406922b0" scoped=""/>
+        <function-ref name="check_point" ref="0x40692410" scoped=""/>
+        <function-ref name="win_precompute_Z" ref="0x406924f0" scoped=""/>
+        <function-ref name="add" ref="0x406925d0" scoped=""/>
+        <function-ref name="gen_public_key" ref="0x406926b0" scoped=""/>
+        <function-ref name="win_precompute" ref="0x40692790" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="17:testECDSAM.nc" name="Random" provided="0" ref="0x406b8de0">
+      <component-ref nicename="testECDSAM" qname="testECDSAM"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Random" ref="0x406b8de0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Random" qname="Random"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="rand16" ref="0x406b7010" scoped=""/>
+        <function-ref name="rand32" ref="0x406b70f0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="46:/opt/tinyos-2.0.2/tos/system/RandomLfsrC.nc" name="Random" provided="1" ref="0x4072a8b8">
+      <component-ref nicename="tos.system.RandomLfsrC" qname="RandomLfsrC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Random" ref="0x4072a8b8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Random" qname="Random"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="rand16" ref="0x4072aa90" scoped=""/>
+        <function-ref name="rand32" ref="0x4072ab70" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="37:/opt/tinyos-2.0.2/tos/system/TimerMilliC.nc" name="Timer" provided="1" ref="0x40bc2d80">
+      <component-ref nicename="tos.system.TimerMilliC" qname="testECDSA.TimerMilliC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Timer" ref="0x40bc2d80" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Timer" qname="Timer"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x406914b8"/>
+            <typename><typedef-ref name="TMilli" ref="0x40691680"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x40cb88a8" scoped=""/>
+        <function-ref name="fired" ref="0x40bc1b18" scoped=""/>
+        <function-ref name="startPeriodicAt" ref="0x40cb8268" scoped=""/>
+        <function-ref name="isOneShot" ref="0x40cb8010" scoped=""/>
+        <function-ref name="getdt" ref="0x40cb8d58" scoped=""/>
+        <function-ref name="gett0" ref="0x40cb8b00" scoped=""/>
+        <function-ref name="isRunning" ref="0x40bc1d70" scoped=""/>
+        <function-ref name="startPeriodic" ref="0x40bc13c0" scoped=""/>
+        <function-ref name="startOneShotAt" ref="0x40cb8588" scoped=""/>
+        <function-ref name="startOneShot" ref="0x40bc1640" scoped=""/>
+        <function-ref name="stop" ref="0x40bc18c0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="20:/opt/tinyos-2.0.2/tos/system/LocalTimeMilliC.nc" name="LocalTime" provided="1" ref="0x40cb7ac8">
+      <component-ref nicename="tos.system.LocalTimeMilliC" qname="LocalTimeMilliC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="LocalTime" ref="0x40cb7ac8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.LocalTime" qname="LocalTime"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x406914b8"/>
+            <typename><typedef-ref name="TMilli" ref="0x40691680"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="get" ref="0x40cb4128" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="38:ECCC.nc" name="ECC" provided="1" ref="0x40858580">
+      <component-ref nicename="ECCC" qname="ECCC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ECC" ref="0x40858580" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="ECC" qname="ECC"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="get_param" ref="0x40858758" scoped=""/>
+        <function-ref name="point2octet" ref="0x40858838" scoped=""/>
+        <function-ref name="win_mul" ref="0x40858918" scoped=""/>
+        <function-ref name="gen_private_key" ref="0x408589f8" scoped=""/>
+        <function-ref name="win_mul_Z" ref="0x40858ad8" scoped=""/>
+        <function-ref name="octet2point" ref="0x40858bb8" scoped=""/>
+        <function-ref name="init" ref="0x40858c98" scoped=""/>
+        <function-ref name="add_proj" ref="0x40858d78" scoped=""/>
+        <function-ref name="BarrettSetBuf" ref="0x40858e58" scoped=""/>
+        <function-ref name="point_is_zero" ref="0x40980010" scoped=""/>
+        <function-ref name="mul" ref="0x409800f0" scoped=""/>
+        <function-ref name="dbl_proj" ref="0x409801d0" scoped=""/>
+        <function-ref name="win_mul_base" ref="0x409802b0" scoped=""/>
+        <function-ref name="check_point" ref="0x40980410" scoped=""/>
+        <function-ref name="win_precompute_Z" ref="0x409804f0" scoped=""/>
+        <function-ref name="add" ref="0x409805d0" scoped=""/>
+        <function-ref name="gen_public_key" ref="0x409806b0" scoped=""/>
+        <function-ref name="win_precompute" ref="0x40980790" scoped=""/>
+      </interface-functions>
+    </interface><component loc="44:NNM.nc" nicename="NNM" qname="NNM">
+      <documentation loc="27:NNM.nc">
+        <short>
+ module NNM, provide interface NN
+ modified from nn.h and nn.c from RSAREF 2.0
+</short>
+      </documentation>
+      <module/>
+    </component><component loc="9:testECDSAM.nc" nicename="testECDSAM" qname="testECDSAM">
+      <module/>
+    </component><component loc="43:/opt/tinyos-2.0.2/tos/system/RandomLfsrC.nc" nicename="tos.system.RandomLfsrC" qname="RandomLfsrC">
+      <documentation loc="32:/opt/tinyos-2.0.2/tos/system/RandomLfsrC.nc">
+        <short>
+ This is a 16 bit Linear Feedback Shift Register pseudo random number
+ generator.</short>
+        <long>
+ This is a 16 bit Linear Feedback Shift Register pseudo random number
+ generator. It is faster than the MLCG generator but does not generate
+ nearly as good random numbers.
+
+ @author Philip Levis
+ @author David Gay
+ @author Alec Woo
+ @date   Jan 20 2005
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="53:/opt/tinyos-2.0.2/tos/system/RandomLfsrC.nc">
+          <from><interface-ref name="Random" ref="0x4072a8b8" scoped=""/></from>
+          <to><interface-ref name="Random" ref="0x40857690" scoped=""/></to>
+        </wire>
+        <wire loc="52:/opt/tinyos-2.0.2/tos/system/RandomLfsrC.nc">
+          <from><interface-ref name="Init" ref="0x4072a540" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x40857318" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="19:/opt/tinyos-2.0.2/tos/system/LocalTimeMilliC.nc" nicename="tos.system.LocalTimeMilliC" qname="LocalTimeMilliC">
+      <documentation loc="11:/opt/tinyos-2.0.2/tos/system/LocalTimeMilliC.nc">
+        <short>
+ Provide current time via the LocalTime&lt;TMilli&gt; interface.</short>
+        <long>
+ Provide current time via the LocalTime&lt;TMilli&gt; interface.
+
+ @author David Gay
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="26:/opt/tinyos-2.0.2/tos/system/LocalTimeMilliC.nc">
+          <from><interface-ref name="LocalTime" ref="0x40cb7ac8" scoped=""/></from>
+          <to><interface-ref name="LocalTime" ref="0x40bddcd8" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="37:ECCC.nc" nicename="ECCC" qname="ECCC">
+      <documentation loc="26:ECCC.nc">
+        <short>
+ ECCC.nc
+ Configuration of Ecc
+
+ Author: An Liu
+ Date: 09/29/2006
+</short>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="47:ECCC.nc">
+          <from><interface-ref name="ECC" ref="0x40858580" scoped=""/></from>
+          <to><interface-ref name="ECC" ref="0x40980d50" scoped=""/></to>
+        </wire>
+        <wire loc="48:ECCC.nc">
+          <from><interface-ref name="NN" ref="0x4099d040" scoped=""/></from>
+          <to><interface-ref name="NN" ref="0x408597e0" scoped=""/></to>
+        </wire>
+        <wire loc="49:ECCC.nc">
+          <from><interface-ref name="Random" ref="0x4099bb70" scoped=""/></from>
+          <to><interface-ref name="Random" ref="0x4072a8b8" scoped=""/></to>
+        </wire>
+        <wire loc="77:ECCC.nc">
+          <from><interface-ref name="CurveParam" ref="0x4099b718" scoped=""/></from>
+          <to><interface-ref name="CurveParam" ref="0x40aa6bd0" scoped=""/></to>
+        </wire>
+        <wire loc="78:ECCC.nc">
+          <from><interface-ref name="CurveParam" ref="0x40865340" scoped=""/></from>
+          <to><interface-ref name="CurveParam" ref="0x40aa6bd0" scoped=""/></to>
+        </wire>
+        <wire loc="79:ECCC.nc">
+          <from><interface-ref name="NN" ref="0x40abe040" scoped=""/></from>
+          <to><interface-ref name="NN" ref="0x408597e0" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="33:ECDSAC.nc" nicename="ECDSAC" qname="ECDSAC">
+      <documentation loc="26:ECDSAC.nc">
+        <short>
+ configuration for ECDSA
+ 
+ Author: An Liu
+ Date: 09/15/2005
+</short>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="44:ECDSAC.nc">
+          <from><interface-ref name="ECDSA" ref="0x40b4fdd8" scoped=""/></from>
+          <to><interface-ref name="ECDSA" ref="0x40b4cb08" scoped=""/></to>
+        </wire>
+        <wire loc="45:ECDSAC.nc">
+          <from><interface-ref name="ECC" ref="0x40b476b0" scoped=""/></from>
+          <to><interface-ref name="ECC" ref="0x40858580" scoped=""/></to>
+        </wire>
+        <wire loc="46:ECDSAC.nc">
+          <from><interface-ref name="NN" ref="0x40b49040" scoped=""/></from>
+          <to><interface-ref name="NN" ref="0x408597e0" scoped=""/></to>
+        </wire>
+        <wire loc="47:ECDSAC.nc">
+          <from><interface-ref name="Random" ref="0x40b469f0" scoped=""/></from>
+          <to><interface-ref name="Random" ref="0x4072a8b8" scoped=""/></to>
+        </wire>
+        <wire loc="48:ECDSAC.nc">
+          <from><interface-ref name="SHA1" ref="0x40b698d8" scoped=""/></from>
+          <to><interface-ref name="SHA1" ref="0x40b4a860" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="33:/opt/tinyos-2.0.2/tos/lib/serial/SerialActiveMessageC.nc" nicename="tos.lib.serial.SerialActiveMessageC" qname="SerialActiveMessageC">
+      <documentation loc="60:/opt/tinyos-2.0.2/tos/lib/serial/Serial.h">
+        <short>
+ </short>
+        <long>
+ @author Phil Buonadonna
+ @author Lewis Girod
+ @author Ben Greenstein
+ @author Philip Levis
+ @date   August 7 2005
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="50:/opt/tinyos-2.0.2/tos/lib/serial/SerialActiveMessageC.nc">
+          <from><interface-ref name="SplitControl" ref="0x40cb6c18" scoped=""/></from>
+          <to><interface-ref name="SplitControl" ref="0x40d1e908" scoped=""/></to>
+        </wire>
+        <wire loc="52:/opt/tinyos-2.0.2/tos/lib/serial/SerialActiveMessageC.nc">
+          <from><interface-ref name="AMSend" ref="0x40cb2550" scoped=""/></from>
+          <to><interface-ref name="AMSend" ref="0x40cca350" scoped=""/></to>
+        </wire>
+        <wire loc="54:/opt/tinyos-2.0.2/tos/lib/serial/SerialActiveMessageC.nc">
+          <from><interface-ref name="Packet" ref="0x40cd52b8" scoped=""/></from>
+          <to><interface-ref name="Packet" ref="0x40cc9be8" scoped=""/></to>
+        </wire>
+        <wire loc="53:/opt/tinyos-2.0.2/tos/lib/serial/SerialActiveMessageC.nc">
+          <from><interface-ref name="Receive" ref="0x40cb0100" scoped=""/></from>
+          <to><interface-ref name="Receive" ref="0x40ccaa90" scoped=""/></to>
+        </wire>
+        <wire loc="56:/opt/tinyos-2.0.2/tos/lib/serial/SerialActiveMessageC.nc">
+          <from><interface-ref name="PacketAcknowledgements" ref="0x40ccbc78" scoped=""/></from>
+          <to><interface-ref name="PacketAcknowledgements" ref="0x40d20310" scoped=""/></to>
+        </wire>
+        <wire loc="55:/opt/tinyos-2.0.2/tos/lib/serial/SerialActiveMessageC.nc">
+          <from><interface-ref name="AMPacket" ref="0x40cce3b8" scoped=""/></from>
+          <to><interface-ref name="AMPacket" ref="0x40cc9010" scoped=""/></to>
+        </wire>
+        <wire loc="48:/opt/tinyos-2.0.2/tos/lib/serial/SerialActiveMessageC.nc">
+          <from><interface-ref name="SoftwareInit" ref="0x4057c358" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x40d1e570" scoped=""/></to>
+        </wire>
+        <wire loc="49:/opt/tinyos-2.0.2/tos/lib/serial/SerialActiveMessageC.nc">
+          <from><interface-ref name="Leds" ref="0x40d18660" scoped=""/></from>
+          <to><interface-ref name="Leds" ref="0x40cda290" scoped=""/></to>
+        </wire>
+        <wire loc="58:/opt/tinyos-2.0.2/tos/lib/serial/SerialActiveMessageC.nc">
+          <from><interface-ref name="SubSend" ref="0x40d20838" scoped=""/></from>
+          <to><interface-ref name="Send" ref="0x40d1a9e0" scoped=""/>
+          <arguments>
+            <value cst="I:0">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="59:/opt/tinyos-2.0.2/tos/lib/serial/SerialActiveMessageC.nc">
+          <from><interface-ref name="SubReceive" ref="0x40d20ef0" scoped=""/></from>
+          <to><interface-ref name="Receive" ref="0x40d1a218" scoped=""/>
+          <arguments>
+            <value cst="I:0">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="61:/opt/tinyos-2.0.2/tos/lib/serial/SerialActiveMessageC.nc">
+          <from><interface-ref name="SerialPacketInfo" ref="0x40d18158" scoped=""/>
+          <arguments>
+            <value cst="I:0">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="Info" ref="0x40f53448" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="34:/opt/tinyos-2.0.2/tos/system/LedsC.nc" nicename="tos.system.LedsC" qname="LedsC">
+      <documentation loc="23:/opt/tinyos-2.0.2/tos/system/LedsC.nc">
+        <short>
+
+ The basic TinyOS LEDs abstraction.</short>
+        <long>
+
+ The basic TinyOS LEDs abstraction.
+
+ @author Phil Buonadonna
+ @author David Gay
+ @author Philip Levis
+ @author Joe Polastre
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="40:/opt/tinyos-2.0.2/tos/system/LedsC.nc">
+          <from><interface-ref name="Leds" ref="0x407291a0" scoped=""/></from>
+          <to><interface-ref name="Leds" ref="0x40728638" scoped=""/></to>
+        </wire>
+        <wire loc="42:/opt/tinyos-2.0.2/tos/system/LedsC.nc">
+          <from><interface-ref name="Init" ref="0x4073f1a0" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x407282f0" scoped=""/></to>
+        </wire>
+        <wire loc="43:/opt/tinyos-2.0.2/tos/system/LedsC.nc">
+          <from><interface-ref name="Led0" ref="0x40720430" scoped=""/></from>
+          <to><interface-ref name="Led0" ref="0x40727298" scoped=""/></to>
+        </wire>
+        <wire loc="44:/opt/tinyos-2.0.2/tos/system/LedsC.nc">
+          <from><interface-ref name="Led1" ref="0x40720e18" scoped=""/></from>
+          <to><interface-ref name="Led1" ref="0x40727ca0" scoped=""/></to>
+        </wire>
+        <wire loc="45:/opt/tinyos-2.0.2/tos/system/LedsC.nc">
+          <from><interface-ref name="Led2" ref="0x40724820" scoped=""/></from>
+          <to><interface-ref name="Led2" ref="0x40740760" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="36(testECDSA.TimerMilliC):/opt/tinyos-2.0.2/tos/system/TimerMilliC.nc" nicename="tos.system.TimerMilliC" qname="testECDSA.TimerMilliC">
+      <documentation loc="25:/opt/tinyos-2.0.2/tos/system/TimerMilliC.nc">
+        <short>
+ The virtualized millisecond timer abstraction.</short>
+        <long>
+ The virtualized millisecond timer abstraction. Instantiating this 
+ component gives an independent millisecond granularity timer.
+
+ @author Philip Levis
+ @date   January 16 2006
+ @see    TEP 102: Timers
+</long>
+      </documentation>
+      <instance number="0">
+        <component-ref nicename="tos.system.TimerMilliC" qname="TimerMilliC"/>
+      </instance>
+      <configuration/>
+      <wiring>
+        <wire>
+          <from><interface-ref name="Timer" ref="0x40bc2d80" scoped=""/></from>
+          <to><interface-ref name="TimerMilli" ref="0x40be7848" scoped=""/>
+          <arguments>
+            <value cst="I:0">
+              <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned=""/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+      </wiring>
+    </component><component loc="45:/opt/tinyos-2.0.2/tos/system/MainC.nc" nicename="tos.system.MainC" qname="MainC">
+      <documentation loc="34:/opt/tinyos-2.0.2/tos/system/MainC.nc">
+        <short>
+ MainC is the system interface the TinyOS boot sequence.</short>
+        <long>
+ MainC is the system interface the TinyOS boot sequence. It wires the
+ boot sequence implementation to the scheduler and hardware resources.
+
+ @author Philip Levis
+ @date   August 6 2005
+ @see    TEP 107: Boot Sequence
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="57:/opt/tinyos-2.0.2/tos/system/MainC.nc">
+          <from><interface-ref name="Boot" ref="0x4056d670" scoped=""/></from>
+          <to><interface-ref name="Boot" ref="0x40575e50" scoped=""/></to>
+        </wire>
+        <wire loc="52:/opt/tinyos-2.0.2/tos/system/MainC.nc">
+          <from><interface-ref name="Scheduler" ref="0x40587210" scoped=""/></from>
+          <to><interface-ref name="Scheduler" ref="0x402fa040" scoped=""/></to>
+        </wire>
+        <wire loc="53:/opt/tinyos-2.0.2/tos/system/MainC.nc">
+          <from><interface-ref name="PlatformInit" ref="0x405877d8" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x4057cc18" scoped=""/></to>
+        </wire>
+        <wire loc="56:/opt/tinyos-2.0.2/tos/system/MainC.nc">
+          <from><interface-ref name="SoftwareInit" ref="0x40587be0" scoped=""/></from>
+          <to><interface-ref name="SoftwareInit" ref="0x4057c358" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component></referenced></component>

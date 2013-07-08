@@ -1,0 +1,38 @@
+<?xml version="1.0" ?>
+<component loc="50:/opt/tinyos-2.0.2/tos/system/RandomLfsrP.nc" nicename="tos.system.RandomLfsrP" qname="RandomLfsrP">
+      <documentation loc="39:/opt/tinyos-2.0.2/tos/system/RandomLfsrP.nc">
+        <short>
+ This is a 16 bit Linear Feedback Shift Register pseudo random number
+generator.</short>
+        <long>
+ This is a 16 bit Linear Feedback Shift Register pseudo random number
+generator. It is faster than the MLCG generator, but the numbers generated
+ have less randomness.
+
+ @author Alec Woo
+ @author David Gay
+ @author Philip Levis
+ @date   August 8 2005
+</long>
+      </documentation>
+      <module/>
+    <specification><interface loc="53:/opt/tinyos-2.0.2/tos/system/RandomLfsrP.nc" name="Random" provided="1" ref="0x40857690">
+      <component-ref nicename="tos.system.RandomLfsrP" qname="RandomLfsrP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Random" ref="0x40857690" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Random" qname="Random"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="rand16" ref="0x40857868" scoped=""/>
+        <function-ref name="rand32" ref="0x40857948" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="52:/opt/tinyos-2.0.2/tos/system/RandomLfsrP.nc" name="Init" provided="1" ref="0x40857318">
+      <component-ref nicename="tos.system.RandomLfsrP" qname="RandomLfsrP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Init" ref="0x40857318" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x408574f0" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

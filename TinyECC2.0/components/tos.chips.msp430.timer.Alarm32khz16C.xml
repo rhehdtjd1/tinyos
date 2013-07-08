@@ -1,0 +1,238 @@
+<?xml version="1.0" ?>
+<component abstract="" loc="30:/opt/tinyos-2.0.2/tos/chips/msp430/timer/Alarm32khz16C.nc" nicename="tos.chips.msp430.timer.Alarm32khz16C" qname="Alarm32khz16C">
+      <documentation loc="22:/opt/tinyos-2.0.2/tos/chips/msp430/timer/Alarm32khz16C.nc">
+        <short>
+ Alarm32khzC is the alarm for async 32khz alarms
+
+ </short>
+        <long>
+ Alarm32khzC is the alarm for async 32khz alarms
+
+ @author Cory Sharp &lt;cssharp@eecs.berkeley.edu&gt;
+ @see  Please refer to TEP 102 for more information about this component and its
+          intended use.
+</long>
+      </documentation>
+      <parameters>
+      </parameters>
+      <configuration/>
+      <wiring>
+        <wire loc="41:/opt/tinyos-2.0.2/tos/chips/msp430/timer/Alarm32khz16C.nc">
+          <from><interface-ref name="Alarm" ref="0x40bd6a68" scoped=""/></from>
+          <to><interface-ref name="Alarm" ref="0x40c09ce0" scoped=""/></to>
+        </wire>
+        <wire loc="40:/opt/tinyos-2.0.2/tos/chips/msp430/timer/Alarm32khz16C.nc">
+          <from><interface-ref name="Init" ref="0x40bd6540" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x40c09868" scoped=""/></to>
+        </wire>
+        <wire loc="43:/opt/tinyos-2.0.2/tos/chips/msp430/timer/Alarm32khz16C.nc">
+          <from><interface-ref name="Msp430Timer" ref="0x40c21690" scoped=""/></from>
+          <to><interface-ref name="Msp430Timer" ref="0x40c0c010" scoped=""/></to>
+        </wire>
+        <wire loc="44:/opt/tinyos-2.0.2/tos/chips/msp430/timer/Alarm32khz16C.nc">
+          <from><interface-ref name="Msp430TimerControl" ref="0x40c20330" scoped=""/></from>
+          <to><interface-ref name="Msp430TimerControl" ref="0x40c0cc08" scoped=""/></to>
+        </wire>
+        <wire loc="45:/opt/tinyos-2.0.2/tos/chips/msp430/timer/Alarm32khz16C.nc">
+          <from><interface-ref name="Msp430Compare" ref="0x40c20d68" scoped=""/></from>
+          <to><interface-ref name="Msp430Compare" ref="0x40c0b6b0" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification><interface loc="33:/opt/tinyos-2.0.2/tos/chips/msp430/timer/Alarm32khz16C.nc" name="Alarm" provided="1" ref="0x40bd6a68">
+      <component-ref nicename="tos.chips.msp430.timer.Alarm32khz16C" qname="Alarm32khz16C"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Alarm" ref="0x40bd6a68" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Alarm" qname="Alarm"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x406918f8"/>
+            <typename><typedef-ref name="T32khz" ref="0x40691ac0"/></typename>
+          </type-tag>
+          <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x401996e8"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x40bf7010" scoped=""/>
+        <function-ref name="fired" ref="0x40bf9718" scoped=""/>
+        <function-ref name="startAt" ref="0x40bf9c08" scoped=""/>
+        <function-ref name="isRunning" ref="0x40bf9990" scoped=""/>
+        <function-ref name="getAlarm" ref="0x40bf7288" scoped=""/>
+        <function-ref name="start" ref="0x40bf9200" scoped=""/>
+        <function-ref name="stop" ref="0x40bf94a0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="32:/opt/tinyos-2.0.2/tos/chips/msp430/timer/Alarm32khz16C.nc" name="Init" provided="1" ref="0x40bd6540">
+      <component-ref nicename="tos.chips.msp430.timer.Alarm32khz16C" qname="Alarm32khz16C"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Init" ref="0x40bd6540" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x40bd6718" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="30:/opt/tinyos-2.0.2/tos/chips/msp430/timer/Msp430Timer32khzC.nc" name="Msp430Compare" provided="1" ref="0x40c0b6b0">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430Timer32khzC" qname="Alarm32khz16C.Msp430Timer"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Msp430Compare" ref="0x40c0b6b0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430Compare" qname="Msp430Compare"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getEvent" ref="0x40c0b888" scoped=""/>
+        <function-ref name="setEvent" ref="0x40c0b968" scoped=""/>
+        <function-ref name="setEventFromPrev" ref="0x40c0ba48" scoped=""/>
+        <function-ref name="setEventFromNow" ref="0x40c0bb28" scoped=""/>
+        <function-ref name="fired" ref="0x40c0bc08" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="34:/opt/tinyos-2.0.2/tos/chips/msp430/timer/Msp430AlarmC.nc" name="Init" provided="1" ref="0x40c09868">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430AlarmC" qname="Alarm32khz16C.Msp430Alarm"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Init" ref="0x40c09868" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x40c09a40" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="29:/opt/tinyos-2.0.2/tos/chips/msp430/timer/Msp430Timer32khzC.nc" name="Msp430TimerControl" provided="1" ref="0x40c0cc08">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430Timer32khzC" qname="Alarm32khz16C.Msp430Timer"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Msp430TimerControl" ref="0x40c0cc08" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430TimerControl" qname="Msp430TimerControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="setControlAsCapture" ref="0x40c0cde0" scoped=""/>
+        <function-ref name="getControl" ref="0x40c0cec0" scoped=""/>
+        <function-ref name="enableEvents" ref="0x40c0b010" scoped=""/>
+        <function-ref name="areEventsEnabled" ref="0x40c0b0f0" scoped=""/>
+        <function-ref name="setControlAsCompare" ref="0x40c0b1d0" scoped=""/>
+        <function-ref name="disableEvents" ref="0x40c0b2b0" scoped=""/>
+        <function-ref name="isInterruptPending" ref="0x40c0b390" scoped=""/>
+        <function-ref name="clearPendingInterrupt" ref="0x40c0b470" scoped=""/>
+        <function-ref name="setControl" ref="0x40c0b550" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="37:/opt/tinyos-2.0.2/tos/chips/msp430/timer/Msp430AlarmC.nc" name="Msp430TimerControl" provided="0" ref="0x40c20330">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430AlarmC" qname="Alarm32khz16C.Msp430Alarm"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Msp430TimerControl" ref="0x40c20330" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430TimerControl" qname="Msp430TimerControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="setControlAsCapture" ref="0x40c20508" scoped=""/>
+        <function-ref name="getControl" ref="0x40c205e8" scoped=""/>
+        <function-ref name="enableEvents" ref="0x40c206c8" scoped=""/>
+        <function-ref name="areEventsEnabled" ref="0x40c207a8" scoped=""/>
+        <function-ref name="setControlAsCompare" ref="0x40c20888" scoped=""/>
+        <function-ref name="disableEvents" ref="0x40c20968" scoped=""/>
+        <function-ref name="isInterruptPending" ref="0x40c20a48" scoped=""/>
+        <function-ref name="clearPendingInterrupt" ref="0x40c20b28" scoped=""/>
+        <function-ref name="setControl" ref="0x40c20c08" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="36:/opt/tinyos-2.0.2/tos/chips/msp430/timer/Msp430AlarmC.nc" name="Msp430Timer" provided="0" ref="0x40c21690">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430AlarmC" qname="Alarm32khz16C.Msp430Alarm"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Msp430Timer" ref="0x40c21690" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430Timer" qname="Msp430Timer"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x40c21868" scoped=""/>
+        <function-ref name="setClockSource" ref="0x40c21948" scoped=""/>
+        <function-ref name="enableEvents" ref="0x40c21a28" scoped=""/>
+        <function-ref name="get" ref="0x40c21b08" scoped=""/>
+        <function-ref name="disableEvents" ref="0x40c21be8" scoped=""/>
+        <function-ref name="clearOverflow" ref="0x40c21cc8" scoped=""/>
+        <function-ref name="getMode" ref="0x40c21da8" scoped=""/>
+        <function-ref name="isOverflowPending" ref="0x40c21e88" scoped=""/>
+        <function-ref name="overflow" ref="0x40c20010" scoped=""/>
+        <function-ref name="setMode" ref="0x40c200f0" scoped=""/>
+        <function-ref name="setInputDivider" ref="0x40c201d0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="35:/opt/tinyos-2.0.2/tos/chips/msp430/timer/Msp430AlarmC.nc" name="Alarm" provided="1" ref="0x40c09ce0">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430AlarmC" qname="Alarm32khz16C.Msp430Alarm"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Alarm" ref="0x40c09ce0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Alarm" qname="Alarm"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x406918f8"/>
+            <typename><typedef-ref name="T32khz" ref="0x40691ac0"/></typename>
+          </type-tag>
+          <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x401996e8"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x40c211e8" scoped=""/>
+        <function-ref name="fired" ref="0x40c08990" scoped=""/>
+        <function-ref name="startAt" ref="0x40c08e80" scoped=""/>
+        <function-ref name="isRunning" ref="0x40c08c08" scoped=""/>
+        <function-ref name="getAlarm" ref="0x40c21460" scoped=""/>
+        <function-ref name="start" ref="0x40c08478" scoped=""/>
+        <function-ref name="stop" ref="0x40c08718" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="28:/opt/tinyos-2.0.2/tos/chips/msp430/timer/Msp430Timer32khzC.nc" name="Msp430Timer" provided="1" ref="0x40c0c010">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430Timer32khzC" qname="Alarm32khz16C.Msp430Timer"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Msp430Timer" ref="0x40c0c010" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430Timer" qname="Msp430Timer"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x40c0c1e8" scoped=""/>
+        <function-ref name="setClockSource" ref="0x40c0c2c8" scoped=""/>
+        <function-ref name="enableEvents" ref="0x40c0c3a8" scoped=""/>
+        <function-ref name="get" ref="0x40c0c488" scoped=""/>
+        <function-ref name="disableEvents" ref="0x40c0c568" scoped=""/>
+        <function-ref name="clearOverflow" ref="0x40c0c648" scoped=""/>
+        <function-ref name="getMode" ref="0x40c0c728" scoped=""/>
+        <function-ref name="isOverflowPending" ref="0x40c0c808" scoped=""/>
+        <function-ref name="overflow" ref="0x40c0c8e8" scoped=""/>
+        <function-ref name="setMode" ref="0x40c0c9c8" scoped=""/>
+        <function-ref name="setInputDivider" ref="0x40c0caa8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="38:/opt/tinyos-2.0.2/tos/chips/msp430/timer/Msp430AlarmC.nc" name="Msp430Compare" provided="0" ref="0x40c20d68">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430AlarmC" qname="Alarm32khz16C.Msp430Alarm"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Msp430Compare" ref="0x40c20d68" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430Compare" qname="Msp430Compare"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getEvent" ref="0x40c1f010" scoped=""/>
+        <function-ref name="setEvent" ref="0x40c1f0f0" scoped=""/>
+        <function-ref name="setEventFromPrev" ref="0x40c1f1d0" scoped=""/>
+        <function-ref name="setEventFromNow" ref="0x40c1f2b0" scoped=""/>
+        <function-ref name="fired" ref="0x40c1f390" scoped=""/>
+      </interface-functions>
+    </interface><component abstract="" loc="32(Alarm32khz16C.Msp430Alarm):/opt/tinyos-2.0.2/tos/chips/msp430/timer/Msp430AlarmC.nc" nicename="tos.chips.msp430.timer.Msp430AlarmC" qname="Alarm32khz16C.Msp430Alarm">
+      <documentation loc="23:/opt/tinyos-2.0.2/tos/chips/msp430/timer/Msp430AlarmC.nc">
+        <short>
+ Msp430Alarm is a generic component that wraps the MSP430 HPL timers and
+ compares into a TinyOS Alarm.</short>
+        <long>
+ Msp430Alarm is a generic component that wraps the MSP430 HPL timers and
+ compares into a TinyOS Alarm.
+
+ @author Cory Sharp &lt;cssharp@eecs.berkeley.edu&gt;
+ @see  Please refer to TEP 102 for more information about this component and its
+          intended use.
+</long>
+      </documentation>
+      <instance>
+        <component-ref nicename="tos.chips.msp430.timer.Msp430AlarmC" qname="Msp430AlarmC"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x406918f8"/>
+            <typename><typedef-ref name="T32khz" ref="0x40691ac0"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <module/>
+    </component><component abstract="" loc="26(Alarm32khz16C.Msp430Timer):/opt/tinyos-2.0.2/tos/chips/msp430/timer/Msp430Timer32khzC.nc" nicename="tos.chips.msp430.timer.Msp430Timer32khzC" qname="Alarm32khz16C.Msp430Timer">
+      <documentation loc="22:/opt/tinyos-2.0.2/tos/chips/msp430/timer/Msp430Timer32khzC.nc">
+        <short>
+ </short>
+        <long>
+ @author Cory Sharp &lt;cssharp@eecs.berkeley.edu&gt;
+</long>
+      </documentation>
+      <instance>
+        <component-ref nicename="tos.chips.msp430.timer.Msp430Timer32khzC" qname="Msp430Timer32khzC"/>
+      </instance>
+      <configuration/>
+    </component></referenced></component>

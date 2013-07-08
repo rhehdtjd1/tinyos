@@ -1,0 +1,8 @@
+digraph "tos.system.RandomLfsrC" {
+  n0x4072a8b8 [shape=ellipse, style=filled, label="Random", fontsize=12];
+  "RandomLfsrP" [fontsize=12, shape=box, URL="../chtml/tos.system.RandomLfsrP.html"];
+  n0x4072a540 [shape=ellipse, style=filled, label="Init", fontsize=12];
+  "RandomLfsrP" [fontsize=12, shape=box, URL="../chtml/tos.system.RandomLfsrP.html"];
+  "n0x4072a8b8" -> "RandomLfsrP" [label="Random", URL="../ihtml/tos.interfaces.Random.html", fontsize=10];
+  "n0x4072a540" -> "RandomLfsrP" [label="Init", URL="../ihtml/tos.interfaces.Init.html", fontsize=10];
+}

@@ -1,0 +1,17 @@
+<area shape="rect" href="../chtml/tos.chips.msp430.usart.Msp430Uart1C.html" title="Msp430Uart1C\n(UartC)" alt="" coords="50,117,180,176">
+<area shape="rect" href="../ihtml/tos.interfaces.UartByte.html" title="UartByte" alt="" coords="85,78,137,93">
+<area shape="rect" href="../ihtml/tos.interfaces.UartByte.html" title="UartByte" alt="" coords="60,48,68,56">
+<area shape="rect" href="../ihtml/tos.interfaces.UartByte.html" title="UartByte" alt="" coords="95,113,103,121">
+<area shape="rect" href="../chtml/tos.platforms.telosa.TelosSerialP.html" title="TelosSerialP" alt="" coords="171,240,275,288">
+<area shape="rect" href="../ihtml/tos.chips.msp430.usart.Msp430UartConfigure.html" title="Msp430UartConfigure" alt="" coords="68,201,194,215">
+<area shape="rect" href="../ihtml/tos.chips.msp430.usart.Msp430UartConfigure.html" title="Msp430UartConfigure" alt="" coords="74,172,82,180">
+<area shape="rect" href="../ihtml/tos.chips.msp430.usart.Msp430UartConfigure.html" title="Msp430UartConfigure" alt="" coords="167,251,175,259">
+<area shape="rect" href="../ihtml/tos.interfaces.UartStream.html" title="UartStream" alt="" coords="150,78,214,93">
+<area shape="rect" href="../ihtml/tos.interfaces.UartStream.html" title="UartStream" alt="" coords="160,49,168,57">
+<area shape="rect" href="../ihtml/tos.interfaces.UartStream.html" title="UartStream" alt="" coords="127,113,135,121">
+<area shape="rect" href="../ihtml/tos.interfaces.StdControl.html" title="StdControl" alt="" coords="284,201,344,215">
+<area shape="rect" href="../ihtml/tos.interfaces.StdControl.html" title="StdControl" alt="" coords="294,167,302,175">
+<area shape="rect" href="../ihtml/tos.interfaces.StdControl.html" title="StdControl" alt="" coords="251,236,259,244">
+<area shape="rect" href="../ihtml/tos.interfaces.Resource.html" title="Resource" alt="" coords="201,201,253,215">
+<area shape="rect" href="../ihtml/tos.interfaces.Resource.html" title="Resource" alt="" coords="211,236,219,244">
+<area shape="rect" href="../ihtml/tos.interfaces.Resource.html" title="Resource" alt="" coords="163,172,171,180">

@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<component loc="42:SHA1M.nc" nicename="SHA1M" qname="SHA1M">
+      <module/>
+    <specification><interface loc="43:SHA1M.nc" name="SHA1" provided="1" ref="0x40b4a860">
+      <component-ref nicename="SHA1M" qname="SHA1M"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SHA1" ref="0x40b4a860" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="SHA1" qname="SHA1"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="reset" ref="0x40b4aa38" scoped=""/>
+        <function-ref name="update" ref="0x40b4ab18" scoped=""/>
+        <function-ref name="digest" ref="0x40b4abf8" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

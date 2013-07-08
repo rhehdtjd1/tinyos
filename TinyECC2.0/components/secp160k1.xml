@@ -1,0 +1,71 @@
+<?xml version="1.0" ?>
+<component loc="36:secp160k1.nc" nicename="secp160k1" qname="secp160k1">
+      <documentation loc="26:secp160k1.nc">
+        <short>
+ Module for curve secp160k1
+
+ Author: An Liu
+ Date: 09/15/2005
+ Modified by: Panos Kampanakis
+ Date: 01/31/2007
+</short>
+      </documentation>
+      <module/>
+    <specification><interface loc="37:secp160k1.nc" name="CurveParam" provided="1" ref="0x40a79b08">
+      <component-ref nicename="secp160k1" qname="secp160k1"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="CurveParam" ref="0x40a79b08" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="CurveParam" qname="CurveParam"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="get_param" ref="0x40a79ce0" scoped=""/>
+        <function-ref name="omega_mul" ref="0x40a79dc0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="38:secp160k1.nc" name="NN" provided="0" ref="0x40ab1010">
+      <component-ref nicename="secp160k1" qname="secp160k1"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="NN" ref="0x40ab1010" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="NN" qname="NN"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="ModSqr" ref="0x40ab11e8" scoped=""/>
+        <function-ref name="LShift" ref="0x40ab12c8" scoped=""/>
+        <function-ref name="ModSmall" ref="0x40ab13a8" scoped=""/>
+        <function-ref name="Gcd" ref="0x40ab1488" scoped=""/>
+        <function-ref name="ModExp" ref="0x40ab1568" scoped=""/>
+        <function-ref name="ModNeg" ref="0x40ab1648" scoped=""/>
+        <function-ref name="AddDigitMult" ref="0x40ab1728" scoped=""/>
+        <function-ref name="ModBarrett" ref="0x40ab1808" scoped=""/>
+        <function-ref name="Digits" ref="0x40ab18e8" scoped=""/>
+        <function-ref name="ModSub" ref="0x40ab19c8" scoped=""/>
+        <function-ref name="ModDiv" ref="0x40ab1aa8" scoped=""/>
+        <function-ref name="Cmp" ref="0x40ab1b88" scoped=""/>
+        <function-ref name="ModBarrettInit" ref="0x40ab1c68" scoped=""/>
+        <function-ref name="AssignDigit" ref="0x40ab1dc8" scoped=""/>
+        <function-ref name="BarrettSetBuf" ref="0x40ab1ea8" scoped=""/>
+        <function-ref name="ModMult" ref="0x40ab0010" scoped=""/>
+        <function-ref name="Sub" ref="0x40ab00f0" scoped=""/>
+        <function-ref name="Mult" ref="0x40ab01d0" scoped=""/>
+        <function-ref name="ModMultOpt" ref="0x40ab02b0" scoped=""/>
+        <function-ref name="Assign" ref="0x40ab0390" scoped=""/>
+        <function-ref name="Decode" ref="0x40ab0470" scoped=""/>
+        <function-ref name="Encode" ref="0x40ab0550" scoped=""/>
+        <function-ref name="Assign2Exp" ref="0x40ab0630" scoped=""/>
+        <function-ref name="Mod" ref="0x40ab0710" scoped=""/>
+        <function-ref name="ModSqrRootOpt" ref="0x40ab07f0" scoped=""/>
+        <function-ref name="Div" ref="0x40ab09d0" scoped=""/>
+        <function-ref name="Add" ref="0x40ab0ab0" scoped=""/>
+        <function-ref name="ModAdd" ref="0x40ab0b90" scoped=""/>
+        <function-ref name="One" ref="0x40ab0c70" scoped=""/>
+        <function-ref name="Bits" ref="0x40ab0d50" scoped=""/>
+        <function-ref name="TestBit" ref="0x40ab0e30" scoped=""/>
+        <function-ref name="Equal" ref="0x40ab0f10" scoped=""/>
+        <function-ref name="ModSqrOpt" ref="0x40aaf010" scoped=""/>
+        <function-ref name="AssignZero" ref="0x40aaf0f0" scoped=""/>
+        <function-ref name="RShift" ref="0x40aaf1d0" scoped=""/>
+        <function-ref name="ModDivOpt" ref="0x40aaf2b0" scoped=""/>
+        <function-ref name="ModInv" ref="0x40aaf390" scoped=""/>
+        <function-ref name="Even" ref="0x40aaf470" scoped=""/>
+        <function-ref name="Zero" ref="0x40aaf550" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

@@ -1,0 +1,17 @@
+digraph "tos.chips.msp430.usart.Msp430Usart1C" {
+  n0x40ebcc08 [shape=ellipse, style=filled, label="HplMsp430UsartInterrupts", fontsize=12];
+  "Msp430UsartShare1P" [fontsize=12, shape=box,peripheries=2, URL="../chtml/tos.chips.msp430.usart.Msp430UsartShare1P.html"];
+  n0x40ec27d0 [shape=ellipse, style=filled, label="Resource", fontsize=12];
+  "Msp430UsartShare1P" [fontsize=12, shape=box,peripheries=2, URL="../chtml/tos.chips.msp430.usart.Msp430UsartShare1P.html"];
+  n0x40ebe320 [shape=ellipse, style=filled, label="HplMsp430Usart", fontsize=12];
+  "HplMsp430Usart1C" [fontsize=12, shape=box,peripheries=2, URL="../chtml/tos.chips.msp430.usart.HplMsp430Usart1C.html"];
+  n0x40ebfe48 [shape=ellipse, style=filled, label="ArbiterInfo", fontsize=12];
+  "Msp430UsartShare1P" [fontsize=12, shape=box,peripheries=2, URL="../chtml/tos.chips.msp430.usart.Msp430UsartShare1P.html"];
+  "Msp430UsartShare1P" [fontsize=12, shape=box,peripheries=2, URL="../chtml/tos.chips.msp430.usart.Msp430UsartShare1P.html"];
+  n0x40ebb110 [shape=ellipse, style=filled, label="ResourceConfigure", fontsize=12];
+  "n0x40ebcc08" -> "Msp430UsartShare1P" [label="HplMsp430UsartInterrupts", URL="../ihtml/tos.chips.msp430.usart.HplMsp430UsartInterrupts.html", fontsize=10];
+  "n0x40ec27d0" -> "Msp430UsartShare1P" [label="Resource", URL="../ihtml/tos.interfaces.Resource.html", fontsize=10];
+  "n0x40ebe320" -> "HplMsp430Usart1C" [label="HplMsp430Usart", URL="../ihtml/tos.chips.msp430.usart.HplMsp430Usart.html", fontsize=10];
+  "n0x40ebfe48" -> "Msp430UsartShare1P" [label="ArbiterInfo", URL="../ihtml/tos.interfaces.ArbiterInfo.html", fontsize=10];
+  "Msp430UsartShare1P" -> "n0x40ebb110" [label="ResourceConfigure[uint8_t]", style=bold, URL="../ihtml/tos.interfaces.ResourceConfigure.html", fontsize=10];
+}

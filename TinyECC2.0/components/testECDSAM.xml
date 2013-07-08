@@ -1,0 +1,228 @@
+<?xml version="1.0" ?>
+<component loc="9:testECDSAM.nc" nicename="testECDSAM" qname="testECDSAM">
+      <module/>
+    <specification><interface loc="19:testECDSAM.nc" name="PubKeyMsg" provided="0" ref="0x406ec398">
+      <component-ref nicename="testECDSAM" qname="testECDSAM"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="PubKeyMsg" ref="0x406ec398" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AMSend" qname="AMSend"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="send" ref="0x406ec570" scoped=""/>
+        <function-ref name="getPayload" ref="0x406ec650" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x406ec730" scoped=""/>
+        <function-ref name="cancel" ref="0x406ec810" scoped=""/>
+        <function-ref name="sendDone" ref="0x406ec8f0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="11:testECDSAM.nc" name="Boot" provided="0" ref="0x40563530">
+      <component-ref nicename="testECDSAM" qname="testECDSAM"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Boot" ref="0x40563530" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Boot" qname="Boot"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="booted" ref="0x40563708" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="23:testECDSAM.nc" name="SerialControl" provided="0" ref="0x406e7318">
+      <component-ref nicename="testECDSAM" qname="testECDSAM"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SerialControl" ref="0x406e7318" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.SplitControl" qname="SplitControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="startDone" ref="0x406e7570" scoped=""/>
+        <function-ref name="stopDone" ref="0x406e7650" scoped=""/>
+        <function-ref name="start" ref="0x406e7730" scoped=""/>
+        <function-ref name="stop" ref="0x406e7810" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="16:testECDSAM.nc" name="LocalTime" provided="0" ref="0x406b68a0">
+      <component-ref nicename="testECDSAM" qname="testECDSAM"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="LocalTime" ref="0x406b68a0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.LocalTime" qname="LocalTime"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x406914b8"/>
+            <typename><typedef-ref name="TMilli" ref="0x40691680"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="get" ref="0x406b6ee8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="13:testECDSAM.nc" name="ECC" provided="0" ref="0x4069a598">
+      <component-ref nicename="testECDSAM" qname="testECDSAM"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ECC" ref="0x4069a598" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="ECC" qname="ECC"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="get_param" ref="0x4069a770" scoped=""/>
+        <function-ref name="point2octet" ref="0x4069a850" scoped=""/>
+        <function-ref name="win_mul" ref="0x4069a930" scoped=""/>
+        <function-ref name="gen_private_key" ref="0x4069aa10" scoped=""/>
+        <function-ref name="win_mul_Z" ref="0x4069aaf0" scoped=""/>
+        <function-ref name="octet2point" ref="0x4069abd0" scoped=""/>
+        <function-ref name="init" ref="0x4069acb0" scoped=""/>
+        <function-ref name="add_proj" ref="0x4069ad90" scoped=""/>
+        <function-ref name="BarrettSetBuf" ref="0x4069ae70" scoped=""/>
+        <function-ref name="point_is_zero" ref="0x40692010" scoped=""/>
+        <function-ref name="mul" ref="0x406920f0" scoped=""/>
+        <function-ref name="dbl_proj" ref="0x406921d0" scoped=""/>
+        <function-ref name="win_mul_base" ref="0x406922b0" scoped=""/>
+        <function-ref name="check_point" ref="0x40692410" scoped=""/>
+        <function-ref name="win_precompute_Z" ref="0x406924f0" scoped=""/>
+        <function-ref name="add" ref="0x406925d0" scoped=""/>
+        <function-ref name="gen_public_key" ref="0x406926b0" scoped=""/>
+        <function-ref name="win_precompute" ref="0x40692790" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="17:testECDSAM.nc" name="Random" provided="0" ref="0x406b8de0">
+      <component-ref nicename="testECDSAM" qname="testECDSAM"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Random" ref="0x406b8de0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Random" qname="Random"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="rand16" ref="0x406b7010" scoped=""/>
+        <function-ref name="rand32" ref="0x406b70f0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="15:testECDSAM.nc" name="myTimer" provided="0" ref="0x406ba8c8">
+      <component-ref nicename="testECDSAM" qname="testECDSAM"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="myTimer" ref="0x406ba8c8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Timer" qname="Timer"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x406914b8"/>
+            <typename><typedef-ref name="TMilli" ref="0x40691680"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x406b93d8" scoped=""/>
+        <function-ref name="fired" ref="0x406af678" scoped=""/>
+        <function-ref name="startPeriodicAt" ref="0x406afd80" scoped=""/>
+        <function-ref name="isOneShot" ref="0x406afb28" scoped=""/>
+        <function-ref name="getdt" ref="0x406b9888" scoped=""/>
+        <function-ref name="gett0" ref="0x406b9630" scoped=""/>
+        <function-ref name="isRunning" ref="0x406af8d0" scoped=""/>
+        <function-ref name="startPeriodic" ref="0x406baef0" scoped=""/>
+        <function-ref name="startOneShotAt" ref="0x406b90b8" scoped=""/>
+        <function-ref name="startOneShot" ref="0x406af1a0" scoped=""/>
+        <function-ref name="stop" ref="0x406af420" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="12:testECDSAM.nc" name="NN" provided="0" ref="0x406944d8">
+      <component-ref nicename="testECDSAM" qname="testECDSAM"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="NN" ref="0x406944d8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="NN" qname="NN"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="ModSqr" ref="0x406946b0" scoped=""/>
+        <function-ref name="LShift" ref="0x40694790" scoped=""/>
+        <function-ref name="ModSmall" ref="0x40694870" scoped=""/>
+        <function-ref name="Gcd" ref="0x40694950" scoped=""/>
+        <function-ref name="ModExp" ref="0x40694a30" scoped=""/>
+        <function-ref name="ModNeg" ref="0x40694b10" scoped=""/>
+        <function-ref name="AddDigitMult" ref="0x40694bf0" scoped=""/>
+        <function-ref name="ModBarrett" ref="0x40694cd0" scoped=""/>
+        <function-ref name="Digits" ref="0x40694db0" scoped=""/>
+        <function-ref name="ModSub" ref="0x40694e90" scoped=""/>
+        <function-ref name="ModDiv" ref="0x40669010" scoped=""/>
+        <function-ref name="Cmp" ref="0x406690f0" scoped=""/>
+        <function-ref name="ModBarrettInit" ref="0x406691d0" scoped=""/>
+        <function-ref name="AssignDigit" ref="0x40669330" scoped=""/>
+        <function-ref name="BarrettSetBuf" ref="0x40669410" scoped=""/>
+        <function-ref name="ModMult" ref="0x406694f0" scoped=""/>
+        <function-ref name="Sub" ref="0x406695d0" scoped=""/>
+        <function-ref name="Mult" ref="0x406696b0" scoped=""/>
+        <function-ref name="ModMultOpt" ref="0x40669790" scoped=""/>
+        <function-ref name="Assign" ref="0x40669870" scoped=""/>
+        <function-ref name="Decode" ref="0x40669950" scoped=""/>
+        <function-ref name="Encode" ref="0x40669a30" scoped=""/>
+        <function-ref name="Assign2Exp" ref="0x40669b10" scoped=""/>
+        <function-ref name="Mod" ref="0x40669bf0" scoped=""/>
+        <function-ref name="ModSqrRootOpt" ref="0x40669cd0" scoped=""/>
+        <function-ref name="Div" ref="0x40669eb0" scoped=""/>
+        <function-ref name="Add" ref="0x40668010" scoped=""/>
+        <function-ref name="ModAdd" ref="0x406680f0" scoped=""/>
+        <function-ref name="One" ref="0x406681d0" scoped=""/>
+        <function-ref name="Bits" ref="0x406682b0" scoped=""/>
+        <function-ref name="TestBit" ref="0x40668390" scoped=""/>
+        <function-ref name="Equal" ref="0x40668470" scoped=""/>
+        <function-ref name="ModSqrOpt" ref="0x40668550" scoped=""/>
+        <function-ref name="AssignZero" ref="0x40668630" scoped=""/>
+        <function-ref name="RShift" ref="0x40668710" scoped=""/>
+        <function-ref name="ModDivOpt" ref="0x406687f0" scoped=""/>
+        <function-ref name="ModInv" ref="0x406688d0" scoped=""/>
+        <function-ref name="Even" ref="0x406689b0" scoped=""/>
+        <function-ref name="Zero" ref="0x40668a90" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="18:testECDSAM.nc" name="Leds" provided="0" ref="0x406c4298">
+      <component-ref nicename="testECDSAM" qname="testECDSAM"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Leds" ref="0x406c4298" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Leds" qname="Leds"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="led0Off" ref="0x406c4470" scoped=""/>
+        <function-ref name="led0Toggle" ref="0x406c4550" scoped=""/>
+        <function-ref name="led1On" ref="0x406c4630" scoped=""/>
+        <function-ref name="led1Toggle" ref="0x406c4710" scoped=""/>
+        <function-ref name="led2Toggle" ref="0x406c47f0" scoped=""/>
+        <function-ref name="get" ref="0x406c48d0" scoped=""/>
+        <function-ref name="led1Off" ref="0x406c49b0" scoped=""/>
+        <function-ref name="led2Off" ref="0x406c4d30" scoped=""/>
+        <function-ref name="set" ref="0x406c4a90" scoped=""/>
+        <function-ref name="led0On" ref="0x406c4b70" scoped=""/>
+        <function-ref name="led2On" ref="0x406c4c50" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="14:testECDSAM.nc" name="ECDSA" provided="0" ref="0x406adc10">
+      <component-ref nicename="testECDSAM" qname="testECDSAM"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ECDSA" ref="0x406adc10" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="ECDSA" qname="ECDSA"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="sign" ref="0x406adde8" scoped=""/>
+        <function-ref name="init" ref="0x406adec8" scoped=""/>
+        <function-ref name="verify" ref="0x40691010" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="21:testECDSAM.nc" name="PacketMsg" provided="0" ref="0x406c32f0">
+      <component-ref nicename="testECDSAM" qname="testECDSAM"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="PacketMsg" ref="0x406c32f0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AMSend" qname="AMSend"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="send" ref="0x406c34c8" scoped=""/>
+        <function-ref name="getPayload" ref="0x406c35a8" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x406c3688" scoped=""/>
+        <function-ref name="cancel" ref="0x406c3768" scoped=""/>
+        <function-ref name="sendDone" ref="0x406c3848" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="20:testECDSAM.nc" name="PriKeyMsg" provided="0" ref="0x406ecaf0">
+      <component-ref nicename="testECDSAM" qname="testECDSAM"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="PriKeyMsg" ref="0x406ecaf0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AMSend" qname="AMSend"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="send" ref="0x406eccc8" scoped=""/>
+        <function-ref name="getPayload" ref="0x406ecda8" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x406ece88" scoped=""/>
+        <function-ref name="cancel" ref="0x406c3010" scoped=""/>
+        <function-ref name="sendDone" ref="0x406c30f0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="22:testECDSAM.nc" name="TimeMsg" provided="0" ref="0x406c3a30">
+      <component-ref nicename="testECDSAM" qname="testECDSAM"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="TimeMsg" ref="0x406c3a30" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AMSend" qname="AMSend"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="send" ref="0x406c3c08" scoped=""/>
+        <function-ref name="getPayload" ref="0x406c3ce8" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x406c3dc8" scoped=""/>
+        <function-ref name="cancel" ref="0x406c3ea8" scoped=""/>
+        <function-ref name="sendDone" ref="0x406eb010" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

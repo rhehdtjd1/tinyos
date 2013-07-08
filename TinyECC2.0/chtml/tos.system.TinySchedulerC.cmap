@@ -1,0 +1,11 @@
+<area shape="rect" href="../chtml/tos.system.SchedulerBasicP.html" title="SchedulerBasicP" alt="" coords="56,118,187,166">
+<area shape="rect" href="../ihtml/tos.interfaces.TaskBasic.html" title="TaskBasic[uint8_t]" alt="" coords="56,78,160,93">
+<area shape="rect" href="../ihtml/tos.interfaces.TaskBasic.html" title="TaskBasic[uint8_t]" alt="" coords="47,50,55,58">
+<area shape="rect" href="../ihtml/tos.interfaces.TaskBasic.html" title="TaskBasic[uint8_t]" alt="" coords="72,114,80,122">
+<area shape="rect" href="../chtml/tos.chips.msp430.McuSleepC.html" title="McuSleepC" alt="" coords="73,230,169,278">
+<area shape="rect" href="../ihtml/tos.interfaces.McuSleep.html" title="McuSleep" alt="" coords="121,190,178,205">
+<area shape="rect" href="../ihtml/tos.interfaces.McuSleep.html" title="McuSleep" alt="" coords="117,162,125,170">
+<area shape="rect" href="../ihtml/tos.interfaces.McuSleep.html" title="McuSleep" alt="" coords="117,226,125,234">
+<area shape="rect" href="../ihtml/tos.interfaces.Scheduler.html" title="Scheduler" alt="" coords="167,78,222,93">
+<area shape="rect" href="../ihtml/tos.interfaces.Scheduler.html" title="Scheduler" alt="" coords="176,50,184,58">
+<area shape="rect" href="../ihtml/tos.interfaces.Scheduler.html" title="Scheduler" alt="" coords="139,114,147,122">

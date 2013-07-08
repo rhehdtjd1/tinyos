@@ -1,0 +1,89 @@
+<?xml version="1.0" ?>
+<interfacedef loc="35:CurveParam.nc" nicename="CurveParam" qname="CurveParam">
+      <documentation loc="26:CurveParam.nc">
+        <short>
+ Interface for curve params
+
+ Author: An Liu
+ Date: 09/15/2005
+</short>
+      </documentation>
+      <function command="" loc="37:CurveParam.nc" name="get_param" provided="0" ref="0x408685f0">
+        <interfacedef-ref nicename="CurveParam" qname="CurveParam"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:158"><struct-ref name="Params" ref="0x40567898"/>
+                <typename><typedef-ref name="Params" ref="0x405669e8"/></typename>
+              </type-tag>
+            </type-pointer>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="37:CurveParam.nc" name="para" ref="0x40868498">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:158"><struct-ref name="Params" ref="0x40567898"/>
+                <typename><typedef-ref name="Params" ref="0x405669e8"/></typename>
+              </type-tag>
+            </type-pointer>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="39:CurveParam.nc" name="omega_mul" provided="0" ref="0x408651d8">
+        <interfacedef-ref nicename="CurveParam" qname="CurveParam"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="NN_UINT" ref="0x4056a138"/></typename>
+          </type-int>
+          <function-parameters>
+            <type-pointer alignment="I:2" size="I:2">
+              <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+                <typename><typedef-ref name="NN_DIGIT" ref="0x4056c6e0"/></typename>
+              </type-int>
+            </type-pointer>
+            <type-pointer alignment="I:2" size="I:2">
+              <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+                <typename><typedef-ref name="NN_DIGIT" ref="0x4056c6e0"/></typename>
+              </type-int>
+            </type-pointer>
+            <type-pointer alignment="I:2" size="I:2">
+              <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+                <typename><typedef-ref name="NN_DIGIT" ref="0x4056c6e0"/></typename>
+              </type-int>
+            </type-pointer>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="NN_UINT" ref="0x4056a138"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="39:CurveParam.nc" name="a" ref="0x40868a20">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+                <typename><typedef-ref name="NN_DIGIT" ref="0x4056c6e0"/></typename>
+              </type-int>
+            </type-pointer>
+          </variable>
+          <variable loc="39:CurveParam.nc" name="b" ref="0x40868c20">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+                <typename><typedef-ref name="NN_DIGIT" ref="0x4056c6e0"/></typename>
+              </type-int>
+            </type-pointer>
+          </variable>
+          <variable loc="39:CurveParam.nc" name="omega" ref="0x40868e48">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+                <typename><typedef-ref name="NN_DIGIT" ref="0x4056c6e0"/></typename>
+              </type-int>
+            </type-pointer>
+          </variable>
+          <variable loc="39:CurveParam.nc" name="digits" ref="0x40865068">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="NN_UINT" ref="0x4056a138"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+    </interfacedef>

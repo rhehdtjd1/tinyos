@@ -1,0 +1,34 @@
+<area shape="rect" href="../chtml/tos.chips.msp430.usart.Msp430UartP.html" title="Msp430UartP\n(UartP)" alt="" coords="472,117,584,165">
+<area shape="rect" href="../ihtml/tos.interfaces.ResourceConfigure.html" title="ResourceConfigure[uint8_t]" alt="" coords="320,78,475,93">
+<area shape="rect" href="../ihtml/tos.interfaces.ResourceConfigure.html" title="ResourceConfigure[uint8_t]" alt="" coords="292,49,300,57">
+<area shape="rect" href="../ihtml/tos.interfaces.ResourceConfigure.html" title="ResourceConfigure[uint8_t]" alt="" coords="468,131,476,139">
+<area shape="rect" href="../ihtml/tos.chips.msp430.usart.Msp430UartConfigure.html" title="Msp430UartConfigure[uint8_t]" alt="" coords="140,190,312,205">
+<area shape="rect" href="../ihtml/tos.chips.msp430.usart.Msp430UartConfigure.html" title="Msp430UartConfigure[uint8_t]" alt="" coords="468,141,476,149">
+<area shape="rect" href="../ihtml/tos.chips.msp430.usart.Msp430UartConfigure.html" title="Msp430UartConfigure[uint8_t]" alt="" coords="98,231,106,239">
+<area shape="rect" href="../ihtml/tos.interfaces.Resource.html" title="Resource[uint8_t]" alt="" coords="325,190,425,205">
+<area shape="rect" href="../ihtml/tos.interfaces.Resource.html" title="Resource[uint8_t]" alt="" coords="468,144,476,152">
+<area shape="rect" href="../ihtml/tos.interfaces.Resource.html" title="Resource[uint8_t]" alt="" coords="288,231,296,239">
+<area shape="rect" href="../ihtml/tos.chips.msp430.usart.HplMsp430UsartInterrupts.html" title="HplMsp430UsartInterrupts" alt="" coords="430,190,578,205">
+<area shape="rect" href="../ihtml/tos.chips.msp430.usart.HplMsp430UsartInterrupts.html" title="HplMsp430UsartInterrupts" alt="" coords="468,153,476,161">
+<area shape="rect" href="../ihtml/tos.chips.msp430.usart.HplMsp430UsartInterrupts.html" title="HplMsp430UsartInterrupts" alt="" coords="426,231,434,239">
+<area shape="rect" href="../chtml/tos.chips.msp430.usart.HplMsp430Usart1C.html" title="HplMsp430Usart1C" alt="" coords="534,229,696,288">
+<area shape="rect" href="../ihtml/tos.chips.msp430.usart.HplMsp430Usart.html" title="HplMsp430Usart" alt="" coords="593,190,688,205">
+<area shape="rect" href="../ihtml/tos.chips.msp430.usart.HplMsp430Usart.html" title="HplMsp430Usart" alt="" coords="560,161,568,169">
+<area shape="rect" href="../ihtml/tos.chips.msp430.usart.HplMsp430Usart.html" title="HplMsp430Usart" alt="" coords="603,225,611,233">
+<area shape="rect" href="../chtml/tos.chips.msp430.timer.Counter32khz16C.html" title="Counter32khz16C" alt="" coords="720,229,870,288">
+<area shape="rect" href="../ihtml/tos.lib.timer.Counter.html" title="Counter&lt;T32khz, uint16_t&gt;" alt="" coords="718,190,870,205">
+<area shape="rect" href="../ihtml/tos.lib.timer.Counter.html" title="Counter&lt;T32khz, uint16_t&gt;" alt="" coords="580,149,588,157">
+<area shape="rect" href="../ihtml/tos.lib.timer.Counter.html" title="Counter&lt;T32khz, uint16_t&gt;" alt="" coords="754,225,762,233">
+<area shape="rect" href="../chtml/tos.system.LedsC.html" title="LedsC" alt="" coords="915,229,998,288">
+<area shape="rect" href="../ihtml/tos.interfaces.Leds.html" title="Leds" alt="" coords="897,190,925,205">
+<area shape="rect" href="../ihtml/tos.interfaces.Leds.html" title="Leds" alt="" coords="580,141,588,149">
+<area shape="rect" href="../ihtml/tos.interfaces.Leds.html" title="Leds" alt="" coords="926,225,934,233">
+<area shape="rect" href="../ihtml/tos.interfaces.UartByte.html" title="UartByte" alt="" coords="493,78,545,93">
+<area shape="rect" href="../ihtml/tos.interfaces.UartByte.html" title="UartByte" alt="" coords="466,49,474,57">
+<area shape="rect" href="../ihtml/tos.interfaces.UartByte.html" title="UartByte" alt="" coords="506,113,514,121">
+<area shape="rect" href="../ihtml/tos.interfaces.UartStream.html" title="UartStream" alt="" coords="559,78,623,93">
+<area shape="rect" href="../ihtml/tos.interfaces.UartStream.html" title="UartStream" alt="" coords="567,49,575,57">
+<area shape="rect" href="../ihtml/tos.interfaces.UartStream.html" title="UartStream" alt="" coords="536,113,544,121">
+<area shape="rect" href="../ihtml/tos.interfaces.Resource.html" title="Resource[uint8_t]" alt="" coords="652,78,752,93">
+<area shape="rect" href="../ihtml/tos.interfaces.Resource.html" title="Resource[uint8_t]" alt="" coords="680,47,688,55">
+<area shape="rect" href="../ihtml/tos.interfaces.Resource.html" title="Resource[uint8_t]" alt="" coords="580,113,588,121">

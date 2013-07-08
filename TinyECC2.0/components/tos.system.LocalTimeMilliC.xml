@@ -1,0 +1,89 @@
+<?xml version="1.0" ?>
+<component loc="19:/opt/tinyos-2.0.2/tos/system/LocalTimeMilliC.nc" nicename="tos.system.LocalTimeMilliC" qname="LocalTimeMilliC">
+      <documentation loc="11:/opt/tinyos-2.0.2/tos/system/LocalTimeMilliC.nc">
+        <short>
+ Provide current time via the LocalTime&lt;TMilli&gt; interface.</short>
+        <long>
+ Provide current time via the LocalTime&lt;TMilli&gt; interface.
+
+ @author David Gay
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="26:/opt/tinyos-2.0.2/tos/system/LocalTimeMilliC.nc">
+          <from><interface-ref name="LocalTime" ref="0x40cb7ac8" scoped=""/></from>
+          <to><interface-ref name="LocalTime" ref="0x40bddcd8" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification><interface loc="20:/opt/tinyos-2.0.2/tos/system/LocalTimeMilliC.nc" name="LocalTime" provided="1" ref="0x40cb7ac8">
+      <component-ref nicename="tos.system.LocalTimeMilliC" qname="LocalTimeMilliC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="LocalTime" ref="0x40cb7ac8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.LocalTime" qname="LocalTime"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x406914b8"/>
+            <typename><typedef-ref name="TMilli" ref="0x40691680"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="get" ref="0x40cb4128" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="36:/opt/tinyos-2.0.2/tos/chips/msp430/timer/HilTimerMilliC.nc" name="LocalTime" provided="1" ref="0x40bddcd8">
+      <component-ref nicename="tos.chips.msp430.timer.HilTimerMilliC" qname="HilTimerMilliC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="LocalTime" ref="0x40bddcd8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.LocalTime" qname="LocalTime"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x406914b8"/>
+            <typename><typedef-ref name="TMilli" ref="0x40691680"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="get" ref="0x40bdb370" scoped=""/>
+      </interface-functions>
+    </interface><component loc="32:/opt/tinyos-2.0.2/tos/chips/msp430/timer/HilTimerMilliC.nc" nicename="tos.chips.msp430.timer.HilTimerMilliC" qname="HilTimerMilliC">
+      <documentation loc="22:/opt/tinyos-2.0.2/tos/chips/msp430/timer/HilTimerMilliC.nc">
+        <short>
+ HilTimerMilliC provides a parameterized interface to a virtualized
+ millisecond timer.</short>
+        <long>
+ HilTimerMilliC provides a parameterized interface to a virtualized
+ millisecond timer.  TimerMilliC in tos/system/ uses this component to
+ allocate new timers.
+
+ @author Cory Sharp &lt;cssharp@eecs.berkeley.edu&gt;
+ @see  Please refer to TEP 102 for more information about this component and its
+          intended use.
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="47:/opt/tinyos-2.0.2/tos/chips/msp430/timer/HilTimerMilliC.nc">
+          <from><interface-ref name="TimerMilli" ref="0x40bdf9a0" scoped=""/></from>
+          <to><interface-ref name="Timer" ref="0x40c91210" scoped=""/></to>
+        </wire>
+        <wire loc="48:/opt/tinyos-2.0.2/tos/chips/msp430/timer/HilTimerMilliC.nc">
+          <from><interface-ref name="LocalTime" ref="0x40bddcd8" scoped=""/></from>
+          <to><interface-ref name="LocalTime" ref="0x40cc0a88" scoped=""/></to>
+        </wire>
+        <wire loc="46:/opt/tinyos-2.0.2/tos/chips/msp430/timer/HilTimerMilliC.nc">
+          <from><interface-ref name="Init" ref="0x40bdf1f0" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x40bda790" scoped=""/></to>
+        </wire>
+        <wire loc="50:/opt/tinyos-2.0.2/tos/chips/msp430/timer/HilTimerMilliC.nc">
+          <from><interface-ref name="TimerFrom" ref="0x40c975a0" scoped=""/></from>
+          <to><interface-ref name="Timer" ref="0x40c55270" scoped=""/></to>
+        </wire>
+        <wire loc="51:/opt/tinyos-2.0.2/tos/chips/msp430/timer/HilTimerMilliC.nc">
+          <from><interface-ref name="Alarm" ref="0x40c6a5b8" scoped=""/></from>
+          <to><interface-ref name="Alarm" ref="0x40bdabe8" scoped=""/></to>
+        </wire>
+        <wire loc="52:/opt/tinyos-2.0.2/tos/chips/msp430/timer/HilTimerMilliC.nc">
+          <from><interface-ref name="Counter" ref="0x40cbf448" scoped=""/></from>
+          <to><interface-ref name="Counter" ref="0x40c180b0" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component></referenced></component>

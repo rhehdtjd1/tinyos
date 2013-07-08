@@ -1,0 +1,111 @@
+<?xml version="1.0" ?>
+<interfacedef loc="35:SHA1.nc" nicename="SHA1" qname="SHA1">
+      <documentation loc="26:SHA1.nc">
+        <short>
+ Interface for SHA-1
+ 
+ Author: An Liu
+ Date: 09/15/2005
+</short>
+      </documentation>
+      <function command="" loc="37:SHA1.nc" name="reset" provided="0" ref="0x40b6b4d8">
+        <interfacedef-ref nicename="SHA1" qname="SHA1"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:2" cname="int" size="I:2"/>
+          <function-parameters>
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:98"><struct-ref name="SHA1Context" ref="0x40572620"/>
+                <typename><typedef-ref name="SHA1Context" ref="0x40571680"/></typename>
+              </type-tag>
+            </type-pointer>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="37:SHA1.nc" name="context" ref="0x40b6b380">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:98"><struct-ref name="SHA1Context" ref="0x40572620"/>
+                <typename><typedef-ref name="SHA1Context" ref="0x40571680"/></typename>
+              </type-tag>
+            </type-pointer>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="38:SHA1.nc" name="update" provided="0" ref="0x40b6bef0">
+        <interfacedef-ref nicename="SHA1" qname="SHA1"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:2" cname="int" size="I:2"/>
+          <function-parameters>
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:98"><struct-ref name="SHA1Context" ref="0x40572620"/>
+                <typename><typedef-ref name="SHA1Context" ref="0x40571680"/></typename>
+              </type-tag>
+            </type-pointer>
+            <type-pointer alignment="I:2" size="I:2">
+              <type-qualified const="">
+                  <typename><typedef-ref name="uint8_t" ref="0x401992d8"/></typename>
+                <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned=""/>
+              </type-qualified>
+            </type-pointer>
+            <type-int alignment="I:2" cname="unsigned long" size="I:4" unsigned="">
+              <typename><typedef-ref name="uint32_t" ref="0x40199af8"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="38:SHA1.nc" name="context" ref="0x40b6b8f0">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:98"><struct-ref name="SHA1Context" ref="0x40572620"/>
+                <typename><typedef-ref name="SHA1Context" ref="0x40571680"/></typename>
+              </type-tag>
+            </type-pointer>
+          </variable>
+          <variable loc="38:SHA1.nc" name="message_array" ref="0x40b6bb78">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-qualified const="">
+                  <typename><typedef-ref name="uint8_t" ref="0x401992d8"/></typename>
+                <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned=""/>
+              </type-qualified>
+            </type-pointer>
+          </variable>
+          <variable loc="38:SHA1.nc" name="length" ref="0x40b6bd88">
+            <type-int alignment="I:2" cname="unsigned long" size="I:4" unsigned="">
+              <typename><typedef-ref name="uint32_t" ref="0x40199af8"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="39:SHA1.nc" name="digest" provided="0" ref="0x40b69770">
+        <interfacedef-ref nicename="SHA1" qname="SHA1"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:2" cname="int" size="I:2"/>
+          <function-parameters>
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:98"><struct-ref name="SHA1Context" ref="0x40572620"/>
+                <typename><typedef-ref name="SHA1Context" ref="0x40571680"/></typename>
+              </type-tag>
+            </type-pointer>
+            <type-pointer alignment="I:2" size="I:2">
+              <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+                <typename><typedef-ref name="uint8_t" ref="0x401992d8"/></typename>
+              </type-int>
+            </type-pointer>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="39:SHA1.nc" name="context" ref="0x40b69328">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-tag alignment="I:2" size="I:98"><struct-ref name="SHA1Context" ref="0x40572620"/>
+                <typename><typedef-ref name="SHA1Context" ref="0x40571680"/></typename>
+              </type-tag>
+            </type-pointer>
+          </variable>
+          <variable loc="39:SHA1.nc" name="Message_Digest" ref="0x40b69610">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+                <typename><typedef-ref name="uint8_t" ref="0x401992d8"/></typename>
+              </type-int>
+            </type-pointer>
+          </variable>
+        </parameters>
+      </function>
+    </interfacedef>
